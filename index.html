@@ -19,12 +19,68 @@
                         <img src="images/logo-animation.gif" alt="Голосовой ассистент JIQ">
                     </a>
                 </div>
-                <nav class="header__menu">
+                <!-- <nav class="header__menu">
                     <ul>
                         <li><a href="javascript:void(0);"><span>Продукты</span></a></li>
                         <li><a href="javascript:void(0);"><span>Новости</span></a></li>
                         <li><a href="javascript:void(0);"><span>Партнерам</span></a></li>
                         <li><a href="javascript:void(0);"><span>Контакты</span></a></li>
+                    </ul>
+                </nav> -->
+                <nav class="header__menu">
+                    <ul>
+                        <li class="inner--list">
+                            <a href="javascript:void(0);">
+                                <span>Продукты</span>
+                            </a>
+                            <div class="menu__list">						
+                                <div class="menu__list--block">
+                                    <a href="calls.html">
+                                        <span class="block--img">
+                                            <img src="images/header_menu_icon1.png" alt="Голосовой робот для исходящих звонков">
+                                        </span>
+                                        <span class="block--title"><span>Голосовой робот для исходящих звонков</span></span>
+                                    </a>
+                                </div>
+                                <div class="menu__list--block">
+                                    <a href="ivr.html">
+                                        <span class="block--img">
+                                            <img src="images/header_menu_icon2.png" alt="Виртуальный ассистент для замены IVR">
+                                        </span>
+                                        <span class="block--title"><span>Виртуальный ассистент для замены IVR</span></span>
+                                    </a>
+                                </div>
+                                <div class="menu__list--block">
+                                    <a href="promotion.html">
+                                        <span class="block--img">
+                                            <img src="images/header_menu_icon3.png" alt="Мобильный ассистент для продвижения товаров и услуг">
+                                        </span>
+                                        <span class="block--title"><span>Мобильный ассистент для продвижения товаров и услуг</span></span>
+                                    </a>
+                                </div>
+                                <div class="menu__list--block">
+                                    <a href="call_center.html">
+                                        <span class="block--img">
+                                            <img src="images/header_menu_icon5.png" alt="Виртуальный колл-центр с готовыми сценариями">
+                                        </span>
+                                        <span class="block--title"><span>Виртуальный колл-центр с готовыми сценариями</span></span>
+                                    </a>
+                                </div>
+                                <div class="menu__list--block">
+                                    <a href="grocery_retail.html">
+                                        <span class="block--img">
+                                            <img src="images/header_menu_icon5.png" alt="Голосовой ассистент для продуктового ритейла">
+                                        </span>
+                                        <span class="block--title"><span>Голосовой ассистент для продуктового ритейла</span></span>
+                                    </a>
+                                </div>
+                            </div>			
+                        </li>
+                        <li class="">
+                            <a href="#contacts">
+                                <span>Контакты</span>
+                            </a>						
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -59,14 +115,17 @@
                     </div>
                 </div>
                 <div class="intro__picture">
+                    <video autoplay="" muted="" loop="" playsinline="">
+                        <source src="images/main_page_bg_back.mp4" type="video/mp4">
+                    </video>
                     <picture class="wow fadeInUp bg--back" data-wow-duration="0.5s" data-wow-delay="0.8s">
                         <img src="images/main_page_bg_back.gif" alt="Голосовые ассистенты">
                     </picture>
                     <picture class="wow fadeInUp bg--front" data-wow-duration="0.5s" data-wow-delay="0.8s">
                         <source srcset="images/main_page_bg_front_mobile.png" media="(max-width: 767px)">
                         <source srcset="images/main_page_bg_front_tablet.png" media="(max-width: 1199px)">
-                        <source srcset="images/main_page_bg_front.png" media="(min-width: 1199px)">
-                        <img src="images/main_page_bg_front.png" alt="Голосовые ассистенты">
+                        <source srcset="images/main_page_bg_front_tablet.png" media="(min-width: 1199px)">
+                        <img src="images/main_page_bg_front_tablet.png" alt="Голосовые ассистенты">
                     </picture>
                 </div>
             </div>
@@ -135,8 +194,11 @@
                         <span class="btn-hover"></span>
                     </a>
                 </div>
-                <div class="products__picture">
-                    <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                <div class="products__picture wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                    <div class="products__picture--front">
+                        <video autoplay="" muted="" loop="" playsinline="">
+                            <source src="images/main_page_promotion_bg_front.mp4" type="video/mp4">
+                        </video>
                         <picture>
                             <source srcset="images/main_page_promotion_bg_front_mobile.png" media="(max-width: 767px)">
                             <source srcset="images/main_page_promotion_bg_front_tablet.png" media="(max-width: 1199px)">
@@ -196,8 +258,13 @@
                 </div>
             </div>
         </section>
-        <section data-section="contacts">
+        <section data-section="contacts" id="contacts">
             <div class="container">
+                <div class="contacts__bg">
+                    <video autoplay="" muted="" loop="" playsinline="" class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                        <source src="images/main_page_contacts_bg.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div class="contacts__wrap">
                     <h2 class="wow fadeInUp no-md" data-wow-duration="0.7s" data-wow-delay="0.4s">Оставить <span class="highlighted">заявку на презентацию</span> виртуального оператора JIQ!</h2>
                     <h2 class="wow fadeInUp md" data-wow-duration="0.7s" data-wow-delay="0.4s">Оставить заявку на презентацию <span class="highlighted">оператора JIQ!</span></h2>

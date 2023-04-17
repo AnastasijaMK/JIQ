@@ -525,9 +525,110 @@ header .container {
     transition: color .3s ease-out;
 }
 
-.header__menu ul li a:hover,
+.header__menu ul li:hover a,
 .header__phone a:hover {
     color: #E11EB5;
+}
+
+.header__menu li.inner--list {
+    padding: 10px 58px 10px 0;
+    position: relative;
+    margin-right: 0;
+}
+
+.header__menu li.inner--list:after {
+    content: url('../images/header_menu_arrow.svg');
+    position: absolute;
+    top: 8px;
+    right: 40px;
+}
+
+
+.header__menu li.inner--list:hover:after {
+    content: url('../images/header_menu_arrow_pink.svg');
+}
+
+.header__menu .inner--list .menu__list {
+    background: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    width: 630px;
+    position: absolute;
+    left: 0;
+    top: 36px;
+    padding: 20px 39px 0 15px;
+    flex-wrap: wrap;
+    display: none;
+    z-index: -1;
+}
+
+.header__menu .inner--list:hover .menu__list {
+    display: flex;
+    z-index: 2;
+}
+
+.header__menu .inner--list .menu__list--block {
+    display: block;
+    width: calc(50% - 27px);
+    margin-right: 54px;
+    margin-bottom: 23px;
+}
+
+.header__menu .inner--list .menu__list--block:nth-child(even) {
+    margin-right: 0;
+}
+
+.header__menu .inner--list .menu__list--block a {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header__menu .inner--list .menu__list--block .block--img {
+    width: 80px;
+    min-width: 80px;
+    height: 65px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header__menu .inner--list .menu__list--block .block--img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.header__menu .inner--list .menu__list--block .block--title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #08294F;
+    margin-top: 6px;
+    padding-bottom: 21px;
+    position: relative;
+}
+
+.header__menu .inner--list .menu__list--block .block--title span {
+    display: inline;
+    border-bottom: 1px solid transparent;
+    transition: border .3s ease-out;
+}
+
+.header__menu .inner--list .menu__list--block:hover .block--title span {
+    border-bottom: 1px solid #000000;
+}
+
+.header__menu .inner--list .menu__list--block .block--title:after {
+    content: url('../images/header_menu_inner_arrow.svg');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    transition: none;
 }
 
 .header__right {
