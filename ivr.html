@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Виртуальный ассистент для замены IVR</title>
+
+    <link rel="stylesheet" href="css/style-lib.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="#" title="Голосовой ассистент JIQ">
+                        <img src="images/logo-animation.gif" alt="Голосовой ассистент JIQ">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="#news"><span>Новости</span></a></li>
+                        <li><a href="#contacts"><span>Контакты</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <div class="header__phone">
+                    <a href="tel:+74992881890" title="+7 (499) 288-18-90">+7 (499) 288-18-90</a>
+                </div>
+                <div class="header__language">
+                    <a href="#" class="active"><span>RU</span></a>
+                    <a href="#"><span>EN</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main data-main="ivr">
+        <div class="mouse-follow"></div>
+        <section data-section="intro">
+            <div class="container">
+                <div class="intro__text wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h1>Виртуальный ассистент <br> для замены IVR</h1>
+                    <p class="intro__info">Интеллектуальный голосовой ассистент для обработки входящих звонков помогает оптимизировать взаимодействие с клиентами, одновременно снижая операционные расходы.</p>
+                    <div class="intro___form">
+                        <form action="">
+                            <label>
+                                <input type="tel" name="PHONE" required placeholder="+_(___) ___ __ __">
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <button type="submit" class="blur-effect shadow-effect">
+                                <span>Оставить заявку</span>
+                                <span class="btn-hover"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <a href="#contacts" class="scroll-to-form shadow-effect">
+                        Оставить заявку
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="intro__picture">
+                    <picture class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <source srcset="images/ivr_section1_bg_mobile.png" media="(max-width: 767px)">
+                        <source srcset="images/ivr_section1_bg_tablet.png" media="(max-width: 1199px)">
+                        <source srcset="images/ivr_section1_bg.png" media="(min-width: 1199px)">
+                        <img src="images/ivr_section1_bg.png" alt="Виртуальный ассистент для замены IVR">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section data-section="about">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Как это работает?</h2>
+                <p class="about__text wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">Голосовой <span class="highlighted"><b>робот JIQ</b></span> не только классифицирует запросы и маршрутизирует их, а самостоятельно может консультировать клиентов и вести диалог</p>
+                <div class="about__wrap wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s">
+                    <div class="about__block">
+                        <div class="about__block--icon">
+                            <img src="images/ivr_about_step1.svg" alt="Шаг 1">
+                        </div>
+                        <div class="about__block--text">
+                            <span class="about__block--title">Шаг 1</span>
+                            <p class="about__block--subtitle">Клиент в свободной форме задает вопрос</p>
+                        </div>
+                    </div>
+                    <div class="about__block">
+                        <div class="about__block--icon">
+                            <img src="images/ivr_about_step2.svg" alt="Шаг 2">
+                        </div>
+                        <div class="about__block--text">
+                            <span class="about__block--title">Шаг 2</span>
+                            <p class="about__block--subtitle">Голосовой робот определяет тематику обращения</p>
+                        </div>
+                    </div>
+                    <div class="about__block">
+                        <div class="about__block--text">
+                            <span class="about__block--title">Шаг 3</span>
+                            <div class="about__block--row-wrap">
+                                <div class="about__block--row">
+                                    <div class="about__block--icon">
+                                        <img src="images/ivr_about_step3-1.svg" alt="Шаг 3">
+                                    </div>
+                                    <p class="about__block--subtitle">Голосовой робот сам отвечает на запрос абонента</p>
+                                </div>
+                                <div class="block--or">
+                                    <span>или</span>
+                                </div>
+                                <div class="about__block--row">
+                                    <div class="about__block--icon">
+                                        <img src="images/ivr_about_step3-2.svg" alt="Шаг 3">
+                                    </div>
+                                    <p class="about__block--subtitle">Голосовой робот маршрутизирует вызов
+                                        на профильного оператора</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cloud">3 простых шага до диалога</div>
+                </div>
+            </div>
+        </section>
+        <section data-section="tech_advantages">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Технологические преимущества<br class="no-md"> <span class="highlighted">голосового робота JIQ</span> для IVR</h2>
+                <div class="tech-advantages--wrap wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s">
+                    <div class="tech-advantages--list">
+                        <div class="tect__advantages--block">
+                            <p class="title">On-Prem & On-Cloud</p>
+                            <p>JIQ предлагает гибкие варианты локального, облачного или гибридного облачного развертывания, дающие вам полный контроль над вашими данными.</p>
+                        </div>
+                        <div class="tect__advantages--block">
+                            <p class="title">Гибкие сценарии диалогов</p>
+                            <p>Возможность создания многоуровневых и нелинейных диалогов в визуальном редакторе без привлечения разработчиков</p>
+                        </div>
+                        <div class="tect__advantages--block">
+                            <p class="title">Индивидуальный голос для вашего бренда</p>
+                            <p>Возможность создавать цифровую копию любого голоса для формирования уникального впечатления от вашего бренда</p>
+                        </div>
+                        <div class="tect__advantages--block">
+                            <p class="title">Бесшовная интеграция</p>
+                            <p>Возможность настройки быстрой и простой интеграции с помощью JIQ API для любой системы</p>
+                        </div>
+                    </div>
+                    <div class="tech-advantages--picture">
+                        <div class="products__picture--back wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                            <picture>
+                                <source srcset="images/ivr_tech_adv_bg_tablet.gif" media="(max-width: 1199px)">
+                                <source srcset="images/ivr_tech_adv_bg.png" media="(min-width: 1199px)">
+                                <img src="images/ivr_tech_adv_bg.png" alt="Виртуальный ассистент для замены IVR">
+                            </picture>
+                        </div>
+                        <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                            <picture>
+                                <img src="images/main_page_ivr_bg_back.gif" alt="Виртуальный ассистент для замены IVR">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="business_advantages">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Преимущества при <span class="highlighted">замене IVR</span> Голосовым роботом</h2>
+                <div class="advantages__compare--wrap">
+                    <div class="advantages__client wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                        <p class="title">Для клиента</p>
+                        <div class="advantages__list">
+                            <div class="advantages__block">
+                                <p>Клиент задает вопрос в свободной форме и получает быстрый ответ</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv1.svg" alt="Преимущества для клиента">
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <p>Клиенту не нужно ходить по долгому и запутанному голосовому меню IVR</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv2.svg" alt="Преимущества для клиента">
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <p>Клиенту не приходится повторять одну и ту же информацию разным операторам при переключении между ними</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv3.svg" alt="Преимущества для клиента">
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <p>Нет необходимости<br> ждать соединения<br> с оператором</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv4.svg" alt="Преимущества для клиента">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cloud">Быстрое взаимодествие</div>
+                    </div>
+                    <div class="advantages__business wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.7s">
+                        <p class="title">Для бизнеса</p>
+                        <div class="advantages__list">
+                            <div class="advantages__block">
+                                <p>Сокращение затрат на телефонию при удержании клиента на федеральном номере 8-800...</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv5.svg" alt="Преимущества для бизнеса">
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <p>Снижение затрат, связанных с переадресацией абонентов на другую группу операторов</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv6.svg" alt="Преимущества для бизнеса">
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <p>Частичное высвобождение операторов благодаря перераспределению нагрузки звонков на голосового робота</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv7.svg" alt="Преимущества для бизнеса">
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <p>Увеличение количества обработанных запросов абонентов за счет уменьшения количества сбросов вызовов абонентов при прохождении IVR</p>
+                                <div class="advantages__block--icon">
+                                    <img src="images/ivr_business_adv8.svg" alt="Преимущества для бизнеса">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="news" id="news">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Новости о голосовом роботе JIQ</h2>
+                <div class="news__wrap">
+                    <div class="news__slider wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster1.jpeg" alt="15 причин подключить виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>20</span> Январь, 2019
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>15 причин подключить виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster2.jpeg" alt="В апреле 2021 года мы получили статус резидента Сколково">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>30</span> Январь, 2022
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>В апреле 2021 года мы получили статус резидента Сколково</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster3.jpg" alt="Технические возможности виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>15</span> Март, 2019
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>Технические возможности виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster4.jpg" alt="15 причин подключить виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>04</span> Февраль, 2019
+                                </div>
+                                <div class="news__block--label">Технологии</div>
+                                <div class="news__block--title">
+                                    <p>15 причин подключить виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news__column wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster3.jpg" alt="Технические возможности виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>15</span> Март, 2019
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>Технические возможности виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster4.jpg" alt="15 причин подключить виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>04</span> Февраль, 2019
+                                </div>
+                                <div class="news__block--label">Технологии</div>
+                                <div class="news__block--title">
+                                    <p>15 причин подключить виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts__wrap">
+                    <h2 class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">Заинтересовал голосовой робот<br class="no-xs"> для замены IVR?</h2>
+                    <p class="contacts__text wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">Оставьте ваши контакты - наш менеджер свяжется с Вами и ответит на интересующие вопросы.</p>
+                    <form action="" class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                        <div class="form__row">
+                            <label data-label="name">
+                                <input type="text" name="NAME" placeholder="Имя.." required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <label data-label="phone">
+                                <input type="tel" name="PHONE" placeholder="+_ (___) ___ __ __" required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <label data-label="email">
+                                <input type="email" name="EMAIL" placeholder="info@info.com" required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                        </div>
+                        <div class="form__button">
+                            <button type="submit" class="blur-effect shadow-effect">
+                                <span>Оставить заявку</span>
+                                <span class="btn-hover"></span>
+                            </button>
+                            <p class="form__agreement">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="page__scroller--wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">
+            <div class="page__scroller magnetize"></div>
+        </div>
+
+        <div class="wrapper--shadow"></div>
+        <div class="popup" data-popup="presentation">
+            <div class="popup__close"></div>
+            <p class="popup__title no-xs">Оставить <span class="highlighted">заявку на презентацию</span> виртуального оператора JIQ!</p>
+            <p class="popup__title xs">Оставить заявку<br> на презентацию<br> <span class="highlighted">оператора JIQ!</span></p>
+            <p class="popup__info">Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы</p>
+            <form action="">
+                <div class="form__row">
+                    <label data-label="name">
+                        <input type="text" name="NAME" placeholder="Имя.." required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                    <label data-label="phone">
+                        <input type="tel" name="PHONE" placeholder="+7 (999) 999 99 99" required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                    <label data-label="email">
+                        <input type="email" name="EMAIL" placeholder="info@info.ru" required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                </div>
+                <div class="form__button">
+                    <button type="submit" class="blur-effect shadow-effect">
+                        <span>Отправить заявку</span>
+                        <span class="btn-hover"></span>
+                    </button>
+                    <p class="form__agreement">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer  class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+        <div class="container">
+            <div class="footer__section">
+                <span class="section--current"></span>
+            </div>
+            <div class="footer__copyright">
+                <p>© 2022 JIQ AI</p>
+            </div>
+            <div class="footer__languages">
+                <p>This site has<br> multiple <span class="highlighted">languages</span></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/script-lib.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
