@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Голосовой робот для исходящих звонков</title>
+
+    <link rel="stylesheet" href="css/style-lib.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="index.html" title="Голосовой ассистент JIQ">
+                        <img src="images/logo-animation.gif" alt="Голосовой ассистент JIQ">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="#news"><span>Новости</span></a></li>
+                        <li><a href="#contacts"><span>Контакты</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <div class="header__phone">
+                    <a href="tel:+74992881890" title="+7 (499) 288-18-90">+7 (499) 288-18-90</a>
+                </div>
+                <div class="header__language">
+                    <a href="#" class="active"><span>RU</span></a>
+                    <a href="#"><span>EN</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main data-main="calls">
+        <div class="mouse-follow"></div>
+        <section data-section="intro">
+            <div class="container">
+                <div class="intro__text wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h1>Голосовой робот <br> для исходящих звонков</h1>
+                    <p class="intro__info">Создание и интеграция в IT-ландшафт виртуальных голосовых ассистентов по требованиям заказчика</p>
+                    <div class="intro___form">
+                        <form action="">
+                            <label>
+                                <input type="tel" name="PHONE" required placeholder="+_(___) ___ __ __">
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <button type="submit" class="blur-effect shadow-effect">
+                                <span>Оставить заявку</span>
+                                <span class="btn-hover"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <a href="javascript:void(0);" class="leave-request j-leave-request blur-effect shadow-effect" data-title="Оставить заявку на <span class='highlighted'>подключение голосового оператора</span>" data-subtitle="Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы">
+                        Оставить заявку
+                        <span class="btn-hover"></span>
+                    </a>
+                    <div class="look-video">
+                        <a class="fancybox_link" data-fancybox="media" href="http://www.youtube.com/watch?v=slT1_AAoHzc">
+                            <span>Посмотрите видео о сервисе</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="intro__picture">
+                    <div class="intro__picture--back">
+                        <picture class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                            <img src="images/main_page_calls_bg_back.gif" alt="Голосовой робот для исходящих звонков">
+                        </picture>
+                    </div>
+                    <div class="intro__picture--front">
+                        <picture class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                            <source srcset="images/call_page_bg_img_mob.png" media="(max-width: 767px)">
+                            <source srcset="images/call_page_bg_img_tablet.png" media="(max-width: 1199px)">
+                            <source srcset="images/call_page_bg_img.png" media="(min-width: 1199px)">
+                            <img src="images/call_page_bg_img.png" alt="Голосовой робот для исходящих звонков">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="about">
+            <div class="container">
+                <div class="about__wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
+                    <h2>Оператор JIQ - кто это?</h2>
+                    <p>Это голосовой робот на телефоне, который <b><span class="highlighted">разговаривает человеческим голосом</span></b>, обладает искусственным интеллектом, способен заменить «живого» человека на телефоне.</p>
+                    <p>Одновременно обрабатывая сотни звонков, голосовой робот <b>заменяет целый штат операторов</b>, снижает пиковые нагрузки на колл-центр, существенно сокращая затраты на персонал.</p>
+                    <a href="javascript:void(0);" class="leave-request j-leave-request blur-effect shadow-effect" data-title="Скачать <span class='highlighted'>презентацию</span>" data-subtitle="Заполните, пожалуйста, заявку, и мы вышлем Вам презентацию на электронную почту.">
+                        Скачать презентацию
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="about_statistics">
+                    <div class="about_statistics--inner wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                        <div>
+                            <div class="about__statistics--block">
+                                <p class="value">24<span class="separator">|</span>7</p>
+                                <p class="title">Возможность круглосуточного<br> совершения звонков</p>
+                            </div>
+                            <div class="about__statistics--block">
+                                <p class="value">200</p>
+                                <p class="title">Звонит со скоростью<br> до 200 звонков в секунду</p>
+                            </div>
+                            <div class="about__statistics--block">
+                                <p class="value">>100</p>
+                                <p class="title">Одновременно заменяет<br class="no-xs"> 100 и более операторов</p>
+                            </div>
+                            <div class="about__statistics--block">
+                                <p class="value">1 млн.</p>
+                                <p class="title">Совершает 1 000 000<br> и более звонков в день</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section data-section="audio">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Прослушать, как голосовой робот<br class="no-xs"> совершает звонки</h2>
+                <div class="audio__inner">
+                    <div class="audio__wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
+                        <div class="audiofiles__item">
+                            <div id="jquery_jplayer_2" class="jp-jplayer">
+                            </div>
+                            <div id="jp_container_2" class="jp-audio">
+                                <div class="jp-type-single">
+                                    <div class="jp-title">
+                                        <ul>
+                                            <li>Оценка качества услуг</li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-gui jp-interface">
+                                        <ul class="jp-controls">
+                                            <li><a href="javascript:void(0);" class="jp-play" tabindex="1"></a></li>
+                                            <li>
+                                                <div class="jp-time-holder">
+                                                    <div class="jp-current-time">
+                                                    </div>
+                                                    <span class="separator">|</span>
+                                                    <div class="jp-duration"></div>
+                                                </div>
+                                            </li>
+                                            <li><a href="javascript:void(0);" class="jp-pause" tabindex="1"></a></li>
+                                            <li><a href="javascript:void(0);" class="jp-mute" tabindex="1" title="mute"></a></li>
+                                            <li><a href="javascript:void(0);" class="jp-unmute" tabindex="1" title="unmute"></a></li>
+                                            <li><a target="_blank" href="images/audio/4ad16146503c3a1255fddab31c0f7ca2.mp3" class="jp-download" tabindex="1" download></a></li>
+                                        </ul>
+                                        <div class="jp-progress">
+                                            <div class="jp-seek-bar">
+                                                <div class="jp-play-bar">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-no-solution">
+                                            Update Required To play the media you will need to either update your browser to a recent version or update your <a
+                                                    href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="audiofiles__item">
+                            <div id="jquery_jplayer_3" class="jp-jplayer">
+                            </div>
+                            <div id="jp_container_3" class="jp-audio">
+                                <div class="jp-type-single">
+                                    <div class="jp-title">
+                                        <ul>
+                                            <li>Работа с задолженностью</li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-gui jp-interface">
+                                        <ul class="jp-controls">
+                                            <li><a href="javascript:void(0);" class="jp-play" tabindex="1"></a></li>
+                                            <li>
+                                                <div class="jp-time-holder">
+                                                    <div class="jp-current-time"></div>
+                                                    <span class="separator">|</span>
+                                                    <div class="jp-duration"></div>
+                                                </div>
+                                            </li>
+                                            <li><a href="javascript:void(0);" class="jp-pause" tabindex="1"></a></li>
+                                            <li><a href="javascript:void(0);" class="jp-mute" tabindex="1" title="mute"></a></li>
+                                            <li><a href="javascript:void(0);" class="jp-unmute" tabindex="1" title="unmute"></a></li>
+                                            <li><a target="_blank" href="images/audio/Collection.wav" class="jp-download" tabindex="1" download></a></li>
+                                        </ul>
+                                        <div class="jp-progress">
+                                            <div class="jp-seek-bar">
+                                                <div class="jp-play-bar">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-no-solution">
+                                            Update Required To play the media you will need to either update your browser to a recent version or update your <a
+                                                    href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="audiofiles__item">
+                            <div id="jquery_jplayer_1" class="jp-jplayer">
+                            </div>
+                            <div id="jp_container_1" class="jp-audio">
+                                <div class="jp-type-single">
+                                    <div class="jp-title">
+                                        <ul>
+                                            <li>Пример собственного синтеза речи</li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-gui jp-interface">
+                                        <ul class="jp-controls">
+                                            <li><a href="javascript:void(0);" class="jp-play" tabindex="1"></a></li>
+                                            <li>
+                                                <div class="jp-time-holder">
+                                                    <div class="jp-current-time"></div>
+                                                    <span class="separator">|</span>
+                                                    <div class="jp-duration"></div>
+                                                </div>
+                                            </li>
+                                            <li><a href="javascript:void(0);" class="jp-pause" tabindex="1"></a></li>
+                                            <li><a href="javascript:void(0);" class="jp-mute" tabindex="1" title="mute"></a></li>
+                                            <li><a href="javascript:void(0);" class="jp-unmute" tabindex="1" title="unmute"></a></li>
+                                            <li><a target="_blank" href="images/audio/speech-synthesis.wav" class="jp-download" tabindex="1" download></a></li>
+                                        </ul>
+                                        <div class="jp-progress">
+                                            <div class="jp-seek-bar">
+                                                <div class="jp-play-bar">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-no-solution">
+                                            Update Required To play the media you will need to either update your browser to a recent version or update your <a
+                                                    href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio__quote wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                        <p>Доверьте общение <br>с клиентами профессионалу</p>
+                        <a href="javascript:void(0);" class="leave-request j-leave-request blur-effect shadow-effect" data-title="Оставить заявку на <span class='highlighted'>подключение голосового оператора</span>" data-subtitle="Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы">
+                            Начать работу с JIQ
+                            <span class="btn-hover"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="area">
+            <div class="container">
+                <div class="area__bg wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"></div>
+                <div class="area__text wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">
+                    <h2>Где применяются <br>голосовые роботы?</h2>
+                    <p>Голосовые роботы <b><span class="highlighted">эффективны везде</span></b>, где требуется обрабатывать огромное количество типовых звонков</p>
+                    <ul class="xs">
+                        <li>Интернет-магазины</li>
+                        <li>Колл центры</li>
+                        <li>Банки</li>
+                        <li>Агентства недвижимости</li>
+                        <li>Коллекторские агентства</li>
+                        <li>Страховые компании</li>
+                        <li>Медицинские учреждения</li>
+                        <li>Операторы связи</li>
+                        <li>Крупные ритейлеры</li>
+                        <li>Маркетинговые агентства</li>
+                        <li>Телекоммуникационные компании</li>
+                        <li>Авиакомпании</li>
+                        <li>Туристические компании</li>
+                        <li>Логистические компании</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section data-section="advantages">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Преимущества <br class="no-md"> <span class="highlighted">робота JIQ</span></h2>
+                <div class="advantages__wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon1.svg" alt="Не устает">
+                        </div>
+                        <p class="title">Не устает</p>
+                        <p>JIQ работает круглосуточно без перерывов и выходных, не болеет и не требует доплаты за сверхурочные</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon2.svg" alt="100 операторов в 1">
+                        </div>
+                        <p class="title">100 операторов в 1</p>
+                        <p>Заменяет собой сотни операторов, может выдерживать высокие нагрузки из большого количества одновременно входящих и исходящих звонков</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon3.svg" alt="Успевает всё">
+                        </div>
+                        <p class="title">Успевает всё</p>
+                        <p>Не пропустит ни единого заказа, не занимает телефонную линию, в то время когда к вам не могут дозвониться клиенты</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon4.svg" alt="Отчеты по звонкам">
+                        </div>
+                        <p class="title">Отчеты по звонкам</p>
+                        <p>Формирует любую аналитику по звонкам. Просмотр истории звонков как в аудио-формате, так и в текстовом виде</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon5.svg" alt="Экономит на ФОТ">
+                        </div>
+                        <p class="title">Экономит на ФОТ</p>
+                        <p>Экономит на фонде оплаты труда, налоговых отчислениях, больничных, обучении персонала</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon6.svg" alt="Не требователен">
+                        </div>
+                        <p class="title">Не требователен</p>
+                        <p>Голосовому роботу не требуется организация отдельного рабочего места, не занимает дополнительные площади, не отвлекается на перекуры</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon7.svg" alt="Простое подключение">
+                        </div>
+                        <p class="title">Простое подключение</p>
+                        <p>Не требует установки дополнительного оборудования. Быстрое подключение к облачному сервису</p>
+                    </div>
+                    <div class="advantages__block">
+                        <div class="advantages__block--icon">
+                            <img src="images/calls_adv_icon8.svg" alt="Интеграция с Клиентом">
+                        </div>
+                        <p class="title">Интеграция с Клиентом</p>
+                        <p>Встраивается в голосовое меню Заказчика. Возможность подключения к CRM системе, инфраструктуре Клиента для синхронизации данных</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="form">
+            <div class="container">
+                <div class="form__wrap">
+                    <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">Повысить эффективность колл-центра</h2>
+                    <p class="form__text no-xs wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">С помощью виртуального голосового оператора JIQ</p>
+                    <p class="form__text xs wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">Оставь заявку и наши менеджеры расскажут о работе голосового ассистента JIQ </p>
+                    <form action="" class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
+                        <label data-label="name">
+                            <input type="text" name="NAME" placeholder="Имя.." required>
+                            <span class="input--error">Заполните это поле</span>
+                        </label>
+                        <label data-label="phone">
+                            <input type="tel" name="PHONE" placeholder="+7 (999) 999 99 99" required>
+                            <span class="input--error">Заполните это поле</span>
+                        </label>
+                        <button type="submit" class="blur-effect shadow-effect">
+                            <span>Оставить заявку</span>
+                            <span class="btn-hover"></span>
+                        </button>
+                    </form>
+                    <p class="form__agreement wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                </div>
+            </div>
+        </section>
+        <section data-section="direction">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">6 направлений, с которыми <span class="highlighted">отлично справится JIQ:</span></h2>
+                <div class="directions__wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">
+                    <div class="direction__block">
+                        <div class="direction__block--inner">
+                            <span class="counter__current">01</span>
+                            <span class="counter__total">| 06</span>
+                            <p class="title">Работа с задолженностью</p>
+                            <p>Робот-коллектор может работать на этапах: преколлекшен, ранняя просрочка, поздняя просрочка, реструктуризация, актуализация данных, он не просто обзванивает должников, но ведет с ними полноценный диалог</p>
+                        </div>
+                    </div>
+                    <div class="direction__block">
+                        <div class="direction__block--inner">
+                            <span class="counter__current">02</span>
+                            <span class="counter__total">| 06</span>
+                            <p class="title">Телемаркетинг и кросс-продажи</p>
+                            <p>Робот-консультант может обзвонить ваших клиентов, предложить купить дополнительные товары, услуги, донести важную информацию и предложения</p>
+                        </div>
+                    </div>
+                    <div class="direction__block">
+                        <div class="direction__block--inner">
+                            <span class="counter__current">03</span>
+                            <span class="counter__total">| 06</span>
+                            <p class="title">Клиентский сервис</p>
+                            <p>Робот-оператор предоставляет справочную информацию, маршрутизирует обращения клиентов, обрабатывает наиболее массовые запросы клиентов, уточняет условия доставки товаров</p>
+                        </div>
+                    </div>
+                    <div class="direction__block">
+                        <div class="direction__block--inner">
+                            <span class="counter__current">04</span>
+                            <span class="counter__total">| 06</span>
+                            <p class="title">Принимают заявки и обращения</p>
+                            <p>Виртуальный ассистент <span class="highlighted">готов принять заказ</span>, записать клиента на прием к врачу, на консультацию к специалисту, сообщить о стоимости услуг</p>
+                        </div>
+                    </div>
+                    <div class="direction__block">
+                        <div class="direction__block--inner">
+                            <span class="counter__current">05</span>
+                            <span class="counter__total">| 06</span>
+                            <p class="title">Маркетинговые опросы</p>
+                            <p>Голосовой робот проведет марктетинговый опрос в считанные часы, сделает оценку качества оказанных услуг, опросит клиентов по различным темам</p>
+                        </div>
+                    </div>
+                    <div class="direction__block">
+                        <div class="direction__block--inner">
+                            <span class="counter__current">06</span>
+                            <span class="counter__total">| 06</span>
+                            <p class="title">HR-бот</p>
+                            <p>JIQ поможет обзвонить кандидатов, сделать предварительный опрос, рассказать об открытой вакансии, условиях сотрудничества, назначит время собеседования и отправит собранную информацию в hr-департамент</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="economy">
+            <div class="container">
+                <p class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Заменяя живого оператора на искусственный интеллект, мы <span class="highlighted">помогаем компаниям экономить</span> там, где раньше это было невозможно</p>
+                <a href="javascript:void(0);" class="leave-request j-leave-request blur-effect shadow-effect wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s" data-title="Оставить заявку на <span class='highlighted'>подключение голосового оператора</span>" data-subtitle="Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы">
+                    Узнать цену
+                    <span class="btn-hover"></span>
+                </a>
+            </div>
+        </section>
+        <section data-section="capabilities">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Технические возможности</h2>
+                <p class="capabilities__text wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.5s">JIQ - облачный сервис, в основе которого лежат <span class="highlighted">нейронные сети, машинное обучение и искусственный интеллект.</span> Он легко подключается к клиенту и обладает множеством функций:</p>
+                <div class="capabilities__wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.7s">
+                    <div class="capabilities__list">
+                        <div class="capability__block">
+                            <p class="title">Анализ целых фраз</p>
+                            <p>Способность понимать и анализировать не только отдельные слова, но и целые фразы и предложения</p>
+                        </div>
+                        <div class="capability__block">
+                            <p class="title">Гибкие сценарии диалогов</p>
+                            <p>Возможность создания многоуровневых и нелинейных диалогов в визуальном редакторе без привлечения разработчиков</p>
+                        </div>
+                        <div class="capability__block">
+                            <p class="title">Индивидуальный голос<br> для вашего бренда</p>
+                            <p>Возможность создавать цифровую копию любого голоса для формирования уникального впечатления от вашего бренда</p>
+                        </div>
+                        <div class="capability__block">
+                            <p class="title">Бесшовная интеграция</p>
+                            <p>Возможность настройки быстрой и простой интеграции с помощью JIQ API для любой системы</p>
+                        </div>
+                    </div>
+                    <div class="capabilities__operator">
+                        <div class="operator__wrap">
+                            <div class="operator__icon"></div>
+                            <p class="operator__text"><span>Привет! Говорите, я реагирую очень быстро на Ваши вопросы/запросы.</span></p>
+                        </div>
+                        <div class="operator__gif">
+                            <img src="images/main_page_ivr_bg_back.gif" alt="Технические возможности">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="steps">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Как подключить JIQ</h2>
+                <div class="steps__wrap">
+                    <div class="step__block wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                        <p class="step__block--title">Этап 1. Разработка</p>
+                        <ul>
+                            <li>Подписание договора. Согласование технического задания</li>
+                            <li>Транскрибация и анализ звукозаписей, примеров "живых разговоров"</li>
+                            <li>Согласование скриптов диалогов</li>
+                            <li>Настройка ASR (Automatic Speech Recognition)</li>
+                            <li>Настройка языковой модели</li>
+                            <li>Обучение диалоговой системы</li>
+                        </ul>
+                    </div>
+                    <div class="step__block wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.8s">
+                        <p class="step__block--title">Этап 2. Внедрение</p>
+                        <ul>
+                            <li>Интеграция решения с инфраструктурой заказчика</li>
+                            <li>Подключение к IP-телефонии Клиента, встраивание в цепочку обработки звонков, IVR</li>
+                            <li>Запуск решения в тестовом режиме</li>
+                            <li>Доработка решения в рамках ТЗ</li>
+                        </ul>
+                    </div>
+                    <div class="step__block wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="1s">
+                        <p class="step__block--title">Этап 3. Эксплуатация</p>
+                        <ul>
+                            <li>Ввод решения в эксплуатацию</li>
+                            <li>Техническое сопровождение, тюнинг диалогов</li>
+                            <li>Дообучение</li>
+                        </ul>
+                        <a href="javascript:void(0);" class="leave-request j-leave-request blur-effect shadow-effect" data-title="Оставить заявку на <span class='highlighted'>подключение голосового оператора</span>" data-subtitle="Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы">
+                            Подключить
+                            <span class="btn-hover"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="news" id="news">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.3s">Новости о голосовом роботе JIQ</h2>
+                <div class="news__wrap">
+                    <div class="news__slider wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster1.jpeg" alt="15 причин подключить виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>20</span> Январь, 2019
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>15 причин подключить виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster2.jpeg" alt="В апреле 2021 года мы получили статус резидента Сколково">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>30</span> Январь, 2022
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>В апреле 2021 года мы получили статус резидента Сколково</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster3.jpg" alt="Технические возможности виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>15</span> Март, 2019
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>Технические возможности виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster4.jpg" alt="15 причин подключить виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>04</span> Февраль, 2019
+                                </div>
+                                <div class="news__block--label">Технологии</div>
+                                <div class="news__block--title">
+                                    <p>15 причин подключить виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news__column wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster3.jpg" alt="Технические возможности виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>15</span> Март, 2019
+                                </div>
+                                <div class="news__block--label">Актуально</div>
+                                <div class="news__block--title">
+                                    <p>Технические возможности виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__block">
+                            <a href="javascript:void(0);">
+                                <div class="news__block--poster">
+                                    <img src="images/ivr_news_poster4.jpg" alt="15 причин подключить виртуального оператора">
+                                </div>
+                                <div class="news__block--date">
+                                    <span>04</span> Февраль, 2019
+                                </div>
+                                <div class="news__block--label">Технологии</div>
+                                <div class="news__block--title">
+                                    <p>15 причин подключить виртуального оператора</p>
+                                    <div class="news__block--arrow">
+                                        <img src="images/ivr_news_arrow.svg" alt="Перейти">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts__wrap">
+                    <h2 class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.4s">Увеличьте пропускную способность вашего колл-центра,  подключив <span class="highlighted">виртуального оператора JIQ</span></h2>
+                    <p class="contacts__text wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">Оставьте заявку и мы в ближайшее время свяжемся с Вами и подробнее расскажем вам про возможности сервиса</p>
+                    <form action="" class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                        <div class="form__row">
+                            <label data-label="name">
+                                <input type="text" name="NAME" placeholder="Имя.." required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <label data-label="phone">
+                                <input type="tel" name="PHONE" placeholder="+_ (___) ___ __ __" required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <label data-label="email">
+                                <input type="email" name="EMAIL" placeholder="info@info.com" required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                        </div>
+                        <div class="form__button">
+                            <button type="submit" class="blur-effect shadow-effect">
+                                <span>Оставить заявку</span>
+                                <span class="btn-hover"></span>
+                            </button>
+                            <p class="form__agreement">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="page__scroller--wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">
+            <div class="page__scroller magnetize"></div>
+        </div>
+        <div class="wrapper--shadow"></div>
+        <div class="popup" data-popup="presentation">
+            <div class="popup__close"></div>
+            <p class="popup__title no-xs">Оставить <span class="highlighted">заявку на презентацию</span> виртуального оператора JIQ!</p>
+            <p class="popup__title xs">Оставить заявку<br> на презентацию<br> <span class="highlighted">оператора JIQ!</span></p>
+            <p class="popup__info">Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы</p>
+            <form action="">
+                <div class="form__row">
+                    <label data-label="name">
+                        <input type="text" name="NAME" placeholder="Имя.." required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                    <label data-label="phone">
+                        <input type="tel" name="PHONE" placeholder="+7 (999) 999 99 99" required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                    <label data-label="email">
+                        <input type="email" name="EMAIL" placeholder="info@info.ru" required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                </div>
+                <div class="form__button">
+                    <button type="submit" class="blur-effect shadow-effect">
+                        <span>Отправить заявку</span>
+                        <span class="btn-hover"></span>
+                    </button>
+                    <p class="form__agreement">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer  class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+        <div class="container">
+            <div class="footer__section">
+                <span class="section--current"></span>
+            </div>
+            <div class="footer__copyright">
+                <p>© 2022 JIQ AI</p>
+            </div>
+            <div class="footer__languages">
+                <p>This site has<br> multiple <span class="highlighted">languages</span></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/script-lib.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

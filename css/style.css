@@ -1568,12 +1568,13 @@ footer .container {
 }
 
 main[data-main="main_page"] section[data-section="intro"] {
-    background: #F9F8FA url(../images/intro_bg_main_page.jpeg) no-repeat right center;
-    background-size: contain;
+    background: #F9F8FA;
 }
 
 main[data-main="main_page"] section[data-section="intro"] .intro__text {
     margin-top: 39px;
+    position: relative;
+    z-index: 2;
 }
 
 main[data-main="main_page"] section[data-section="intro"] .intro__info {
@@ -1585,11 +1586,13 @@ main[data-main="main_page"] section[data-section="intro"] h1 {
 }
 
 main[data-main="main_page"] section[data-section="intro"] .intro__picture {
-    right: 160px;
+    right: -98px;
     top: 50%;
-    width: 585px;
-    height: 575px;
+    width: auto;
+    height: 1095px;
     transform: translateY(-50%);
+    background: transparent;
+    overflow: hidden;
 }
 
 main[data-main="main_page"] section[data-section="intro"] .intro__picture picture img {
@@ -1616,6 +1619,16 @@ main[data-main="main_page"] section[data-section="intro"] .intro__picture .bg--f
     right: 24px;
     bottom: -32px;
     width: auto;
+}
+
+main[data-main="main_page"] section[data-section="intro"] .intro__picture video {
+    height: 100%;
+    width: auto;
+    background: transparent;
+}
+
+main[data-main="main_page"] section[data-section="intro"] .intro__picture picture {
+    display: none;
 }
 
 main[data-main="main_page"] section.products {
@@ -1832,8 +1845,26 @@ main[data-main="main_page"] section[data-section="grocery"] .products__picture--
 main[data-main="main_page"] section[data-section="contacts"] .container {
     border-radius: 30px;
     padding: 0 115px;
-    background: #E9EFF7 url(../images/main_page_contacts_bg.jpeg) no-repeat right bottom;
-    background-size: cover;
+    background: #E9EFF7;
+}
+
+main[data-main="main_page"] section[data-section="contacts"] .contacts__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+main[data-main="main_page"] section[data-section="contacts"] .contacts__bg video {
+    background: transparent;
+    height: 100%;
+    width: auto;
 }
 
 main[data-main="main_page"] section[data-section="contacts"] h2 {
@@ -1846,6 +1877,10 @@ main[data-main="main_page"] section[data-section="contacts"] h2 {
 
 main[data-main="main_page"] section[data-section="contacts"] h2 .highlighted {
     color: #E11EB5;
+}
+
+main[data-main="main_page"] section[data-section="contacts"] .contacts__wrap {
+    z-index: 1;
 }
 
 section[data-section="contacts"] .contacts__text {
@@ -2747,6 +2782,8 @@ main[data-main="promotion"] section[data-section="intro"] button[type="submit"] 
 
 main[data-main="promotion"] section[data-section="intro"] {
     padding-top: 95px;
+    background: #F9F8FA;
+    overflow: hidden;
 }
 
 main[data-main="promotion"] section[data-section="intro"] label {
@@ -2827,31 +2864,24 @@ main[data-main="promotion"] section[data-section="intro"] .intro__statistics .up
 }
 
 main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-    right: 139px;
+    background: transparent;
+    height: 1162px;
+    right: -110px;
+    bottom: -142px;
     top: auto;
-    width: 555px;
-    height: 610px;
-    transform: none;
-    bottom: 0;
+    width: auto;
     overflow: hidden;
+    transform: none;
 }
-main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    bottom: auto;
-    right: auto;
-}
+
 main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
     width: auto;
-    position: absolute;
-    top: -85px;
     background: transparent;
-    height: 845px;
-    right: -164px;
-    top: auto;
-    bottom: -105px;
+    height: 100%;
+}
+
+main[data-main="promotion"] section[data-section="intro"] .intro__picture picture {
+    display: none;
 }
 
 main[data-main="promotion"] section[data-section="intro"] .intro__picture--back {
@@ -3036,10 +3066,27 @@ main[data-main="promotion"] section[data-section="advantages"] .cloud:before {
 }
 
 main[data-main="promotion"] section[data-section="contacts"] .container {
-    background: #E9EFF7 url(../images/promotion_contacts_bg.jpeg) no-repeat right bottom;
-    background-size: contain;
+    background: #E9EFF7;
     border-radius: 30px;
     overflow: hidden;
+}
+
+main[data-main="promotion"] section[data-section="contacts"] .contacts__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+main[data-main="promotion"] section[data-section="contacts"] .contacts__bg video {
+    background: transparent;
+    height: 100%;
+    width: auto;
 }
 
 main[data-main="promotion"] section[data-section="contacts"] h2 {
@@ -3050,6 +3097,7 @@ main[data-main="promotion"] section[data-section="contacts"] h2 {
 
 main[data-main="promotion"] section[data-section="contacts"] .contacts__wrap {
     width: 730px;
+    z-index: 1;
 }
 
 main[data-main="promotion"] section[data-section="contacts"] .contacts__text {
@@ -3350,6 +3398,11 @@ main[data-main="call-center"] section[data-section="interface"] .interface__bloc
     transform: translateX(-50%);
 }
 
+main[data-main="call-center"] section[data-section="contacts"] .container {
+    background: #E9EFF7 url(../images/calls_center_contacts_bg.jpeg) no-repeat right bottom;
+    background-size: contain;
+}
+
 main[data-main="call-center"] section[data-section="contacts"] .contacts__wrap {
     width: 735px;
 }
@@ -3368,10 +3421,1214 @@ main[data-main="call-center"] section[data-section="contacts"] form {
     padding-right: 25px;
 }
 
-main[data-main="call-center"] section[data-section="contacts"] .container {
-    background: #E9EFF7 url(../images/calls_center_contacts_bg.jpeg) no-repeat right bottom;
+main[data-main="calls"] section[data-section="intro"] .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro__text {
+    width: 580px;
+    margin-top: 41px;
+}
+
+main[data-main="calls"] section[data-section="intro"] h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro__info {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 39px;
+    width: 80%;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro___form {
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    width: 453px;
+    padding: 8px;
+    margin-bottom: 40px;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro___form form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main[data-main="calls"] section[data-section="intro"] label {
+    margin-right: 20px;
+    width: calc(100% - 211px);
+    height: 55px;
+    position: relative;
+}
+
+main[data-main="calls"] section[data-section="intro"] label:before {
+    content: url(../images/label_phone.svg);
+    position: absolute;
+    top: 14px;
+    left: 10px;
+}
+
+main[data-main="calls"] section[data-section="intro"] label input {
+    height: 100%;
+    border: 0;
+    padding: 0 0 0 46px;
+    background: transparent;
+}
+
+main[data-main="calls"] section[data-section="intro"] label .input--error {
+    display: none;
+}
+
+main[data-main="calls"] section[data-section="intro"] button[type="submit"] {
+    background: linear-gradient(93.26deg, #3F0FFB 0%, #4910F7 24.7%, #8914E2 46.36%, #D519C9 80.16%);
+    border-radius: 8px;
+    padding: 15px 0 16px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 191px;
+}
+
+main[data-main="calls"] section[data-section="intro"] button[type="submit"] .btn-hover {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 80%;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0,0%,100%,.15);
+    transform: translate3d(0,160%,0) scale(1.1,2);
+    transition: transform .3s ease-out;
+}
+
+main[data-main="calls"] section[data-section="intro"] label.warning {
+    border: 1px solid red;
+    border-radius: 8px;
+}
+
+main[data-main="calls"] section[data-section="intro"] label.warning .input--error {
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FB0F0F;
+}
+
+main[data-main="calls"] section[data-section="intro"] .leave-request {
+    display: none;
+}
+
+main[data-main="calls"] section[data-section="intro"] .look-video span {
+    width: 183px;
+    display: block;
+    line-height: 19px;
+}
+
+main[data-main="calls"] section[data-section="intro"] .look-video span:before {
+    top: 1px;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro__picture {
+    width: 405px;
+    height: 630px;
+    top: auto;
+    bottom: 0;
+    transform: none;
+    right: 264px;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro__picture--back {
+    position: absolute;
+    opacity: 0.05;
+    width: calc(100% + 80px);
+    left: -5px;
+}
+
+main[data-main="calls"] section[data-section="intro"] .intro__picture--front {
+    position: relative;
+}
+
+main[data-main="calls"] section[data-section="about"] {
+    background: none;
+}
+
+main[data-main="calls"] section[data-section="about"] .container {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 530px;
+    justify-content: space-between;
+    max-width: 1565px;
+    padding: 0 45px 0 160px;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__wrap {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: calc(100% - 720px);
+    max-width: 800px;
+}
+
+main[data-main="calls"] section[data-section="about"] h2 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    width: 335px;
+}
+
+main[data-main="calls"] section[data-section="about"] p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+main[data-main="calls"] section[data-section="about"] p:last-of-type {
+    margin-bottom: 0;
+}
+
+main[data-main="calls"] section[data-section="about"] p b {
+    font-weight: 600;
+}
+
+main[data-main="calls"] section[data-section="about"] .highlighted {
+    color: #E11EB5;
+}
+
+main[data-main="calls"] section[data-section="about"] .leave-request {
+    background: linear-gradient(93.26deg, #3F0FFB 0%, #4910F7 24.7%, #8914E2 46.36%, #D519C9 80.16%);
+    border-radius: 8px;
+    padding: 14px 23px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+main[data-main="calls"] section[data-section="about"] .leave-request .btn-hover {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 80%;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0,0%,100%,.15);
+    transform: translate3d(0,160%,0) scale(1.1,2);
+    transition: transform .3s ease-out;
+}
+
+main[data-main="calls"] section[data-section="about"] .about_statistics {
+    width: 655px;
+    margin-left: 65px;
+    height: 530px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+main[data-main="calls"] section[data-section="about"] .about_statistics--inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgba(233, 239, 247, 0.55) url('../images/calls_about_stats_bg.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 75px 85px 60px 85px;
+}
+
+main[data-main="calls"] section[data-section="about"] .about_statistics--inner > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block {
+    position: absolute;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block:nth-child(2) {
+    top: 85px;
+    right: 0;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block:nth-child(3) {
+    left: 0;
+    top: 200px;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block:last-child {
+    right: 18px;
+    bottom: 0;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block .value {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 61px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block .value .separator {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+main[data-main="calls"] section[data-section="about"] .about__statistics--block .title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #111827;
+}
+
+section[data-section="audio"] {
+    background: rgba(233, 239, 247, 0.55) url('../images/calls_audio_bg.jpeg') no-repeat right center;
+    background-size: contain;
+}
+
+section[data-section="audio"] .container {
+    max-width: 1440px;
+    padding: 0 160px;
+}
+
+section[data-section="audio"] h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 30px;
+    width: 690px;
+}
+
+section[data-section="audio"] .audio__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+section[data-section="audio"] .audio__quote {
+    width: 459px;
+    margin-left: 26px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section[data-section="audio"] .audio__quote p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    color: #111827;
+    margin: 0 auto 30px auto;
+    width: 365px;
+    position: relative;
+}
+
+section[data-section="audio"] .audio__quote p:before {
+    content: '“';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200px;
+    line-height: 242px;
+    text-align: center;
+    color: #96A3AE;
+    opacity: 0.15;
+}
+
+section[data-section="audio"] .leave-request {
+    background: linear-gradient(93.26deg, #3F0FFB 0%, #4910F7 24.7%, #8914E2 46.36%, #D519C9 80.16%);
+    border-radius: 8px;
+    padding: 14px 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+section[data-section="audio"] .leave-request .btn-hover {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 80%;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0,0%,100%,.15);
+    transform: translate3d(0,160%,0) scale(1.1,2);
+    transition: transform .3s ease-out;
+}
+
+section[data-section="audio"] .audio__wrap {
+    width: calc(100% - 485px);
+}
+
+section[data-section="audio"] .audiofiles__item {
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px 15px 12px 20px;
+}
+
+section[data-section="audio"] .audiofiles__item:last-child {
+    margin-bottom: 0;
+}
+
+/* AUDIO */
+.jp-jplayer,.jp-audio {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.jp-title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.jp-title ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jp-gui {
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    top: -5px;
+}
+
+.jp-controls {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.jp-controls li {
+    display: inline;
+}
+
+.jp-controls a {
+    color: #fff;
+}
+
+.jp-play,
+.jp-pause {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    top: 4px;
+}
+
+.jp-play {
+    background: url('../images/player_play.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.jp-pause {
+    background: url('../images/player_pause.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.jp-mute,
+.jp-unmute {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.jp-mute {
+    background: url('../images/player_mute.svg') no-repeat center center;
+    background-size: contain;
+    text-align: left;
+}
+
+.jp-unmute {
+    background: url('../images/player_speaker.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.jp-download {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url('../images/player_download.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.jp-time-holder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #111827;
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    display: flex;
+}
+
+.jp-time-holder .separator {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #96A3AE;
+    padding: 0 4px;
+}
+
+.jp-time-holder .jp-duration {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #96A3AE;
+}
+
+.jp-progress {
+    background: rgba(150, 163, 174, 0.2);
+    border-radius: 8px;
+    position: absolute;
+    left: 141px;
+    top: 10px;
+    width: calc(100% - 227px);
+}
+
+.jp-play-bar {
+    height: 5px;
+    background: #E11EB5;
+    border-radius: 8px;
+    position: relative;
+}
+
+.jp-play-bar:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #E11EB5;
+    border-radius: 25px;
+    right: -8px;
+    top: 0;
+    margin-top: -5px;
+}
+
+.jp-volume-bar {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    width: 45px;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) inset;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1) inset;
+    background-color: #992E18;
+    overflow: hidden;
+}
+
+.jp-volume-bar-value {
+    background-color: #fff;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+/* AUDIO END*/
+
+section[data-section="area"] {
+    background: #F9F8FA url(../images/calls_area_bg.jpeg) no-repeat center center;
+    background-size: contain;
+}
+
+section[data-section="area"] .container {
+    max-width: 1440px;
+    padding: 0 160px;
+}
+
+section[data-section="area"] .area__text {
+    position: absolute;
+    z-index: 2;
+    top: 45px;
+    left: 160px;
+}
+
+section[data-section="area"] h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 15px;
+    width: 520px;
+}
+
+section[data-section="area"] .area__text > p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+    width: 360px;
+}
+
+section[data-section="area"] .area__text > p .highlighted {
+    color: #E11EB5;
+}
+
+section[data-section="area"] .area__text > p b {
+    font-weight: 600;
+}
+
+section[data-section="area"] .area__bg {
+    height: 460px;
+    background: url('../images/area_grath_bg.png') no-repeat center center;
+    background-size: contain;
+    position: relative;
+    top: 28px;
+    left: 3px;
+}
+
+section[data-section="area"] .area__bg:before {
+    content: 'JIQ';
+    position: absolute;
+    bottom: -14px;
+    left: 49%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px;
+    line-height: 218px;
+    color: #96A3AE;
+    opacity: 0.07;
+}
+
+main[data-main="calls"] section[data-section="advantages"] {
+    background: rgba(235, 233, 247, 0.5) url(../images/calls_adv_bg.jpeg) no-repeat center center;
+    background-size: contain;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .container {
+    max-width: 1440px;
+    padding: 0 160px;
+}
+
+main[data-main="calls"] section[data-section="advantages"] h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.025em;
+    color: #111827;
+    width: 310px;
+    position: absolute;
+    top: 20px;
+    left: 160px;
+}
+
+main[data-main="calls"] section[data-section="advantages"] h2 .highlighted {
+    color: #E11EB5;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block {
+    background: #FFFFFF;
+    border-radius: 15px;
+    margin: 0 20px 20px 0;
+    width: calc(100%/3 - 20px*2/3);
+    padding: 20px 25px;
+    position: relative;
+    min-height: 160px;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block:first-child {
+    margin-left: calc(100%/3 - 20px*2/3 + 20px);
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block:nth-child(3n + 2) {
+    margin-right: 0;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block--icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block--icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+    width: calc(100% - 41px);
+}
+
+main[data-main="calls"] section[data-section="advantages"] .advantages__block .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #111827;
+    margin-bottom: 10px;
+    width: calc(100% - 40px);
+}
+
+main[data-main="calls"] section[data-section="form"] .form__wrap {
+    width: 930px;
+}
+
+main[data-main="calls"] section[data-section="form"] .form__text {
+    margin: 0 auto 30px auto;
+}
+
+main[data-main="calls"] section[data-section="form"] form {
+    width: 710px;
+    margin: 0 auto 15px auto;
+}
+
+main[data-main="calls"] section[data-section="form"] .form__agreement {
+    width: 430px;
+}
+
+section[data-section="direction"] {
+    background: rgba(235, 233, 247, 0.5) url(../images/calls_direction_bg.jpeg) no-repeat center center;
+    background-size: contain;
+}
+
+section[data-section="direction"] .container {
+    max-width: 1440px;
+    padding: 0 160px;
+}
+
+section[data-section="direction"] h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section[data-section="direction"] h2 .highlighted {
+    color: #E11EB5;
+}
+
+section[data-section="direction"] .directions__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+    counter-reset: my_counter;
+}
+
+section[data-section="direction"] .direction__block {
+    width: calc(100%/3 - 20px*2/3);
+    margin: 0 20px 20px 0;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 10px 20px 15px 20px;
+    min-height: 210px;
+    position: relative;
+}
+
+section[data-section="direction"] .direction__block:nth-child(3n) {
+    margin-right: 0;
+}
+
+section[data-section="direction"] .direction__block--inner {
+    overflow: hidden;
+    padding: 58px 0 0 0;
+    position: relative;
+}
+
+section[data-section="direction"] .direction__block--inner .counter__current {
+    position: absolute;
+    top: 0;
+    left: -14px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #111827;
+}
+
+section[data-section="direction"] .direction__block--inner .counter__total {
+    position: absolute;
+    top: 20px;
+    left: 52px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #96A3AE;
+}
+
+section[data-section="direction"] .direction__block p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+}
+
+section[data-section="direction"] .direction__block p .highlighted {
+    color: #E11EB5;
+    font-weight: 400;
+}
+
+section[data-section="direction"] .direction__block .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+section[data-section="economy"] {
+    padding: 110px 45px;
+}
+
+section[data-section="economy"] .container {
+    background: rgba(233, 239, 247, 0.8) url(../images/form_bg.jpeg) no-repeat center center;
     background-size: contain;
     border-radius: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+section[data-section="economy"] p {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 40px;
+    width: 1065px;
+    max-width: 100%;
+}
+
+section[data-section="economy"] p .highlighted {
+    color: #E11EB5;
+}
+
+section[data-section="economy"] .leave-request {
+    background: linear-gradient(93.26deg, #3F0FFB 0%, #4910F7 24.7%, #8914E2 46.36%, #D519C9 80.16%);
+    border-radius: 8px;
+    padding: 15px 67px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+section[data-section="economy"] .leave-request .btn-hover {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 80%;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0,0%,100%,.15);
+    transform: translate3d(0,160%,0) scale(1.1,2);
+    transition: transform .3s ease-out;
+}
+
+section[data-section="capabilities"] {
+    background: rgba(233, 239, 247, 0.55) url(../images/calls_capabality_bg.jpeg) no-repeat right center;
+    background-size: contain;
+}
+
+section[data-section="capabilities"] .container {
+    max-width: 1440px;
+    padding: 0 160px;
+}
+
+section[data-section="capabilities"] h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+section[data-section="capabilities"] .capabilities__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+    width: 595px;
+    margin-bottom: 30px;
+}
+
+section[data-section="capabilities"] .capabilities__text .highlighted {
+    font-weight: 600;
+    color: #E11EB5;
+}
+
+section[data-section="capabilities"] .capabilities__wrap {
+    display: flex;
+}
+
+section[data-section="capabilities"] .capabilities__operator {
+    width: 330px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 28px 0 27px;
+}
+
+section[data-section="capabilities"] .capabilities__list {
+    width: calc(100% - 350px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+}
+
+section[data-section="capabilities"] .capability__block {
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: calc(50% - 10px);
+    margin: 0 20px 20px 0;
+    padding: 20px 25px;
+    min-height: 150px;
+}
+
+section[data-section="capabilities"] .capability__block:nth-child(even) {
+    margin-right: 0;
+}
+
+section[data-section="capabilities"] .capability__block:nth-child(n + 3) {
+    min-height: 160px;
+}
+
+section[data-section="capabilities"] .capability__block p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+}
+
+section[data-section="capabilities"] .capability__block .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+section[data-section="capabilities"] .operator__wrap {
+    display: flex;
+    margin-bottom: 33px;
+}
+
+section[data-section="capabilities"] .operator__icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: url('../images/operator_icon.jpeg') no-repeat center center;
+    background-size: contain;
+}
+
+section[data-section="capabilities"] .operator__text {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 14px;
+    color: #000000;
+    width: 210px;
+    padding: 14px 3px 12px 15px;
+    position: relative;
+}
+
+section[data-section="capabilities"] .operator__text:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 68px;
+    background: url('../images/operator_text_cloud.png') no-repeat center center;
+    background-size: contain;
+}
+
+section[data-section="capabilities"] .operator__text span {
+    position: relative;
+    z-index: 2;
+}
+
+section[data-section="capabilities"] .operator__gif {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 252px;
+}
+
+section[data-section="capabilities"] .operator__gif img {
+    height: 100%;
+}
+
+section[data-section="steps"] .container {
+    max-width: 1440px;
+    padding: 0 45px;
+}
+
+section[data-section="steps"] h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: -0.025em;
+    color: #111827;
+    margin-bottom: 40px;
+}
+
+section[data-section="steps"] .steps__wrap {
+    display: flex;
+}
+
+section[data-section="steps"] .step__block {
+    background: rgba(233, 239, 247, 0.55) url('../images/step1_bg_block.jpeg') no-repeat top left;
+    background-size: contain;
+    border-radius: 30px;
+    margin: 0 30px 0 0;
+    padding: 30px 45px 30px 50px;
+    position: relative;
+    width: calc(100%/3 - 20px*2/3);
+}
+
+section[data-section="steps"] .step__block:nth-child(2) {
+    background: rgba(235, 233, 247, 0.5) url('../images/step2_bg_block.jpeg') no-repeat top left;
+    background-size: contain;
+}
+
+section[data-section="steps"] .step__block:last-child {
+    margin-right: 0;
+}
+
+section[data-section="steps"] .step__block--title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+section[data-section="steps"] ul {
+    counter-reset: list_counter;
+    position: relative;
+}
+
+section[data-section="steps"] ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12px;
+    background: #E11EB5;
+    height: 100%;
+    width: 2px;
+}
+
+section[data-section="steps"] li {
+    position: relative;
+    padding-left: 36px;
+    padding-bottom: 25px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111827;
+}
+
+section[data-section="steps"] li:last-child {
+    padding-bottom: 0;
+}
+
+section[data-section="steps"] li:before {
+    content: counter(list_counter);
+    counter-increment: list_counter;
+    position: absolute;
+    left: 1px;
+    top: -1px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E11EB5;
+    border-radius: 50px;
+}
+
+section[data-section="steps"] .leave-request {
+    background: linear-gradient(93.26deg, #3F0FFB 0%, #4910F7 24.7%, #8914E2 46.36%, #D519C9 80.16%);
+    border-radius: 8px;
+    padding: 14px 58px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 44px 0 0 0;
+    display: flex;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+section[data-section="steps"] .leave-request .btn-hover {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 80%;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0,0%,100%,.15);
+    transform: translate3d(0,160%,0) scale(1.1,2);
+    transition: transform .3s ease-out;
+}
+
+main[data-main="calls"] section[data-section="contacts"] .container {
+    background: #E9EFF7 url(../images/calls_contacts_bg.jpeg) no-repeat right bottom;
+    background-size: contain;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+main[data-main="calls"] section[data-section="contacts"] h2 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 15px;
+}
+
+main[data-main="calls"] section[data-section="contacts"] h2 .highlighted {
+    color: #E11EB5;
+}
+
+section[data-section="contacts"] .contacts__text {
+    width: 100%;
+}
+
+main[data-main="main_page"] section.products[data-section="promotion"] {
+    background: #F6F9FD;
+}
+
+main[data-main="main_page"] section.products[data-section="promotion"] .container {
+    overflow: hidden;
+}
+main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front {
+    background: transparent;
+    height: 160vh;
+    max-height: 1350px;
+    right: -100px;
+    top: auto;
+    bottom: 50%;
+    transform: translateY(43%);
+    overflow: hidden;
+    position: absolute;
+}
+main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front video {
+    width: auto;
+    background: transparent;
+    height: 100%;
+}
+main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front picture {
+    display: none;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -3427,8 +4684,8 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture {
-        width: 635px;
-        height: 624px;
+        height: 1215px;
+        right: -115px;
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture .bg--back {
@@ -3535,12 +4792,7 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        /*right: 85px;*/
-        /*width: 600px;*/
-        /*height: 660px;*/
-    }
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        height: 895px;
+        height: 1235px;
     }
 
     main[data-main="call-center"] section[data-section="intro"] .container,
@@ -3558,6 +4810,46 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
 
     main[data-main="call-center"] section[data-section="interface"] .interface__block {
         width: 590px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .container,
+    section[data-section="audio"] .container,
+    section[data-section="area"] .container,
+    main[data-main="calls"] section[data-section="advantages"] .container,
+    section[data-section="direction"] .container,
+    section[data-section="capabilities"] .container {
+        max-width: 1920px;
+        padding: 0 260px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .container {
+        padding: 0 74px 0 260px;
+        justify-content: center;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture {
+        width: 56vh;
+        max-width: 500px;
+        height: auto;
+    }
+
+    section[data-section="area"] .area__text,
+    main[data-main="calls"] section[data-section="advantages"] h2 {
+        left: 260px;
+    }
+
+    section[data-section="economy"] {
+        padding: 130px 95px;
+    }
+
+    section[data-section="economy"] .container {
+        max-width: 1730px;
+    }
+
+    main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front {
+        height: 185vh;
+        transform: translateY(50%);
+        right: -65px;
     }
 }
 
@@ -3652,7 +4944,7 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture {
-        right: 80px;
+        right: -180px;
     }
 
     main[data-main="main_page"] section[data-section="calls"] .products__picture--back {
@@ -3693,7 +4985,7 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        right: 80px;
+        right: -175px;
     }
 
     main[data-main="call-center"] section[data-section="intro"] .container,
@@ -3705,9 +4997,6 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
 
     main[data-main="call-center"] section[data-section="intro"] .intro__picture {
         right: 70px;
-    }
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        right: -240px;
     }
 
     main[data-main="call-center"] section[data-section="about"] .about__img {
@@ -3722,12 +5011,39 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         background: #E9EFF7 url(../images/calls_center_contacts_bg.jpeg) no-repeat calc(100% + 50px) bottom;
         background-size: contain;
     }
+
+    main[data-main="calls"] section[data-section="intro"] .container,
+    section[data-section="audio"] .container,
+    section[data-section="area"] .container,
+    main[data-main="calls"] section[data-section="advantages"] .container,
+    section[data-section="direction"] .container,
+    section[data-section="capabilities"] .container {
+        padding: 0 80px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture {
+        right: 132px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .container {
+        padding: 0 23px 0 80px;
+    }
+
+    section[data-section="area"] .area__text,
+    main[data-main="calls"] section[data-section="advantages"] h2 {
+        left: 80px;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .container {
+        background: #E9EFF7 url(../images/calls_contacts_bg.jpeg) no-repeat calc(100% + 50px) bottom;
+        background-size: contain;
+    }
 }
 
 @media only screen and (max-width: 1299px) {
     main[data-main="main_page"] section[data-section="intro"] .intro__picture {
-        width: 490px;
-        height: 482px;
+        right: -149px;
+        height: 940px;
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture .bg--back {
@@ -3785,7 +5101,8 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        right: 0;
+        right: -215px;
+        height: 1070px;
     }
 
     main[data-main="promotion"] section[data-section="advantages"] .cloud {
@@ -3793,8 +5110,7 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="contacts"] .container {
-        background: #E9EFF7 url(../images/promotion_contacts_bg.jpeg) no-repeat calc(100% + 100px) bottom;
-        background-size: contain;
+        background: #E9EFF7;
     }
 
     main[data-main="call-center"] section[data-section="intro"] .intro__picture {
@@ -3812,10 +5128,40 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         background-size: contain;
     }
 
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        top: -60px;
-        height: 815px;
-        right: -280px;
+    main[data-main="calls"] section[data-section="form"] h2 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] .form__text {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    section[data-section="steps"] .step__block {
+        padding: 30px 45px 30px 30px;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .container {
+        background: #E9EFF7 url(../images/calls_contacts_bg.jpeg) no-repeat calc(100% + 105px) bottom;
+        background-size: contain;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] h2 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .contacts__text {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front {
+        max-height: 1200px;
+        right: -155px;
+        transform: translateY(44%);
     }
 }
 
@@ -3872,7 +5218,9 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         min-height: auto;
     }
 
-    section[data-section="intro"] {
+    section[data-section="intro"],
+    main[data-main="main_page"] section[data-section="intro"],
+    main[data-main="promotion"] section[data-section="intro"] {
         min-height: 720px;
         height: 720px;
         background: #F9F8FA url(../images/intro_bg_tablet.jpeg) no-repeat right center;
@@ -4378,6 +5726,15 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         width: 380px;
         height: 455px;
         right: 0;
+        overflow: visible;
+    }
+
+    main[data-main="main_page"] section[data-section="intro"] .intro__picture video {
+        display: none;
+    }
+
+    main[data-main="main_page"] section[data-section="intro"] .intro__picture picture {
+        display: flex;
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture .bg--front {
@@ -4400,6 +5757,11 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         min-height: 800px;
         align-items: flex-start;
         position: relative;
+    }
+
+    main[data-main="main_page"] section.products[data-section="promotion"] {
+        background: rgba(235, 233, 247, 0.5) url(../images/calls_bg_tablet.jpeg) no-repeat left center;
+        background-size: cover;
     }
 
     main[data-main="main_page"] section.products:nth-child(2n + 4) {
@@ -4472,8 +5834,25 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         left: 80px;
     }
 
+    main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front {
+        max-height: none;
+        right: auto;
+        transform: none;
+        height: auto;
+        bottom: auto;
+        position: relative;
+    }
+
+    main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front video {
+        display: none;
+    }
+
     main[data-main="main_page"] section[data-section="promotion"] .products__picture--front picture {
         width: 728px;
+    }
+
+    main[data-main="main_page"] section.products[data-section="promotion"] .products__picture--front picture {
+        display: flex;
     }
 
     main[data-main="main_page"] section[data-section="call-center"] .products__picture--front picture {
@@ -4515,6 +5894,10 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     main[data-main="main_page"] section.products .products__aside h2 {
         width: 600px;
         margin: 0 auto 15px auto;
+    }
+
+    main[data-main="main_page"] section[data-section="contacts"] .contacts__bg {
+        display: none;
     }
 
     main[data-main="main_page"] section[data-section="contacts"] .container {
@@ -4880,14 +6263,22 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        /*width: 335px;*/
-        /*height: 455px;*/
+        height: 455px;
+        width: 335px;
+        right: 0;
+        bottom: 0;
     }
+
     main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        top: auto;
-        height: 710px;
-        right: -359px;
-        bottom: -145px;
+        display: none;
+    }
+
+    main[data-main="promotion"] section[data-section="intro"] .intro__picture picture {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
     }
 
     main[data-main="promotion"] section[data-section="about"] h2 {
@@ -4986,6 +6377,10 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
 
     main[data-main="promotion"] section[data-section="advantages"] .advantages__list p {
         width: 500px;
+    }
+
+    main[data-main="promotion"] section[data-section="contacts"] .contacts__bg {
+        display: none;
     }
 
     main[data-main="promotion"] section[data-section="contacts"] .container {
@@ -5177,6 +6572,401 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     main[data-main="call-center"] section[data-section="contacts"] form {
         padding-right: 0;
     }
+
+    main[data-main="calls"] section[data-section="intro"] .container {
+        padding: 140px 55px 0 55px;
+        justify-content: flex-start;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__text {
+        margin-top: 0;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__info {
+        margin-bottom: 30px;
+        width: 350px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro___form {
+        margin-bottom: 30px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture {
+        right: 0;
+        width: 330px;
+        height: 470px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture--back {
+        left: -35px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .container {
+        padding: 80px 25px 16px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+        background: rgba(235, 233, 247, 0.5) url(../images/calss_about_bg_tablet.jpeg) no-repeat left top;
+        background-size: contain;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    main[data-main="calls"] section[data-section="about"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    main[data-main="calls"] section[data-section="about"] p {
+        width: 515px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        border-radius: 0;
+        margin-top: 50px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics--inner {
+        padding: 0;
+        background: none;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block {
+        position: relative;
+        width: 246px;
+        margin: 0 89px 40px 0;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics--inner > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block:nth-child(2),
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block:nth-child(3) {
+        top: 0;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block:last-child {
+        right: 0;
+    }
+
+    section[data-section="audio"] {
+        padding: 20px 20px 0 20px;
+        background: none;
+    }
+
+    section[data-section="audio"] .container {
+        padding: 80px 47px;
+        background: rgba(233, 239, 247, 0.55) url(../images/calss_audio_bg_tablet.jpeg) no-repeat left top;
+        background-size: contain;
+    }
+
+    section[data-section="audio"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+        width: 100%;
+        text-align: center;
+    }
+
+    section[data-section="audio"] .audio__inner {
+        flex-direction: column;
+    }
+
+    section[data-section="audio"] .audio__wrap {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    section[data-section="audio"] .audio__quote {
+        padding: 37px 0;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    section[data-section="audio"] .audio__quote p {
+        margin: 0 auto 19px auto;
+    }
+
+    section[data-section="area"] {
+        background: none;
+        padding: 20px 20px 0 20px;
+    }
+
+    section[data-section="area"] .container {
+        background: #F9F8FA url(../images/calls_area_bg_tablet.jpeg) no-repeat right bottom;
+        background-size: contain;
+        padding: 80px 25px 49px 26px;
+    }
+
+    section[data-section="area"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    section[data-section="area"] .area__text {
+        left: 25px;
+        top: 78px;
+    }
+
+    section[data-section="area"] .area__bg {
+        top: 46px;
+        left: 1px;
+    }
+
+    section[data-section="area"] .area__bg:before {
+        display: none;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] {
+        background: none;
+        padding: 20px 20px 0 20px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .container {
+        background: rgba(235, 233, 247, 0.5) url(../images/calls_adv_bg_tablet.jpeg) no-repeat top left;
+        background-size: contain;
+        padding: 80px 25px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 30px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__wrap {
+        margin-bottom: -18px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block,
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block:nth-child(3n + 2) {
+        margin: 0 18px 18px 0;
+        width: calc(50% - 9px);
+        padding: 20px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block:first-child {
+        margin-left: 0;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block:nth-child(even) {
+        margin-right: 0;
+    }
+
+    main[data-main="calls"] section[data-section="form"] .form__wrap {
+        width: 521px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] h2 {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 10px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] .form__text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] form {
+        width: calc(100% - 48px);
+    }
+
+    section[data-section="direction"] {
+        background: none;
+        padding: 0 20px 20px 20px;
+    }
+
+    section[data-section="direction"] .container {
+        background: rgba(235, 233, 247, 0.5) url(../images/calls_direction_bg_tablet.jpeg) no-repeat top left;
+        background-size: contain;
+        padding: 80px 25px;
+    }
+
+    section[data-section="direction"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+        text-align: left;
+        width: 435px;
+    }
+
+    section[data-section="direction"] .direction__block,
+    section[data-section="direction"] .direction__block:nth-child(3n) {
+        width: calc(50% - 9px);
+        margin: 0 18px 18px 0;
+        padding: 10px 20px 20px 20px;
+        min-height: 235px;
+    }
+
+    section[data-section="direction"] .direction__block:nth-child(even) {
+        margin-right: 0;
+    }
+
+    section[data-section="economy"] {
+        padding: 0 20px 20px 20px;
+    }
+
+    section[data-section="economy"] .container {
+        background: rgba(233, 239, 247, 0.8) url(../images/form_bg_tablet.jpeg) no-repeat center center;
+        background-size: contain;
+        border-radius: 0;
+        height: 655px;
+        padding: 0 25px;
+    }
+
+    section[data-section="economy"] p {
+        font-size: 32px;
+        line-height: 39px;
+        width: 680px;
+    }
+
+    section[data-section="capabilities"] {
+        background: none;
+        padding: 0 20px 20px 20px;
+    }
+
+    section[data-section="capabilities"] .container {
+        background: rgba(233, 239, 247, 0.55) url(../images/calls_capabality_bg_tablet.jpeg) no-repeat right top;
+        background-size: contain;
+        padding: 80px 25px;
+    }
+
+    section[data-section="capabilities"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    section[data-section="capabilities"] .capabilities__wrap {
+        flex-direction: column;
+    }
+
+    section[data-section="capabilities"] .capabilities__list {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    section[data-section="capabilities"] .capability__block {
+        width: calc(50% - 9px);
+        margin: 0 18px 18px 0;
+        padding: 20px 20px 16px 20px;
+    }
+
+    section[data-section="capabilities"] .capability__block:nth-child(n + 3) {
+        min-height: 170px;
+    }
+
+    section[data-section="capabilities"] .capabilities__operator {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        padding: 40px 48px 40px 30px;
+        flex-direction: row;
+    }
+
+    section[data-section="capabilities"] .operator__wrap {
+        margin-bottom: 0;
+        margin-right: 80px;
+    }
+
+    section[data-section="steps"] .container {
+        padding: 60px 20px 80px 20px;
+    }
+
+    section[data-section="steps"] h2 {
+        font-size: 32px;
+        line-height: 39px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    section[data-section="steps"] .steps__wrap {
+        flex-direction: column;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 0 20px;
+    }
+
+    section[data-section="steps"] .slick-list {
+        overflow: visible;
+    }
+
+    section[data-section="steps"] .step__block {
+        width: 430px;
+        padding: 30px 45px 38px 50px;
+        height: 430px;
+    }
+
+    section[data-section="steps"] .slick-dots {
+        bottom: -19px;
+    }
+
+    section[data-section="steps"] .slick-dots:before,
+    section[data-section="steps"] .slick-dots li:before,
+    section[data-section="steps"] .slick-dots li button:before {
+        display: none;
+    }
+
+    section[data-section="steps"] .slick-dots li {
+        width: auto;
+        height: auto;
+        margin: 0 5px 0 0;
+        padding: 0;
+    }
+
+    section[data-section="steps"] .slick-dots li:last-child {
+        margin-right: 0;
+    }
+
+    section[data-section="steps"] .slick-dots li button {
+        background: rgba(150, 163, 174, 0.3);
+        border-radius: 5px;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        line-height: 0;
+        font-size: 0;
+    }
+
+    section[data-section="steps"] .slick-dots li.slick-active button {
+        background: #E11EB5;
+    }
+
+    section[data-section="steps"] .leave-request {
+        margin: 30px 0 0 0;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .container {
+        background: #E9EFF7 url(../images/calls_contacts_bg_tablet.jpeg) no-repeat left bottom;
+        background-size: contain;
+        padding: 80px 25px 0 25px;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] h2 {
+        font-size: 36px;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .contacts__text {
+        font-size: 18px;
+        line-height: 26px;
+        width: 551px;
+        margin: 0 auto 30px auto;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -5213,8 +7003,9 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         font-weight: 300;
     }
 
-    section[data-section="intro"] {
-        background: #F9F8FA url(../images/intro_bg_mobile.jpeg) no-repeat right center;
+    section[data-section="intro"],
+    main[data-main="promotion"] section[data-section="intro"] {
+        background: #F9F8FA url(../images/intro_bg_mobile.jpeg) no-repeat right bottom;
         background-size: contain;
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh) * 100);
@@ -5789,6 +7580,8 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         margin-bottom: 10px;
         background: #F9F8FA url(../images/intro_bg_main_page_mobile.jpeg) no-repeat right bottom;
         background-size: contain;
+        min-height: 680px;
+        height: 680px;
     }
 
     main[data-main="main_page"] section[data-section="intro"] .container {
@@ -5832,7 +7625,7 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     main[data-main="main_page"] section[data-section="intro"] .intro__picture .bg--back {
         height: 83%;
         left: auto;
-        right: 19vh;
+        right: 15vh;
     }
 
     main[data-main="main_page"] section.products {
@@ -5841,6 +7634,11 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         background: rgba(235, 233, 247, 0.5) url(../images/calls_bg_mobile.jpeg) no-repeat left center;
         background-size: cover;
         min-height: 580px;
+    }
+
+    main[data-main="main_page"] section.products[data-section="promotion"] {
+        background: rgba(235, 233, 247, 0.5) url(../images/calls_bg_mobile.jpeg) no-repeat left center;
+        background-size: cover;
     }
 
     main[data-main="main_page"] section.products:nth-child(2n + 4) {
@@ -5914,6 +7712,7 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
 
     main[data-main="main_page"] section[data-section="promotion"] .products__picture--front picture {
         width: 375px;
+        max-width: 100%;
     }
 
     main[data-main="main_page"] section[data-section="call-center"] .products__picture {
@@ -6531,33 +8330,10 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        /* width: 255px; */
-        /* width: 68vw; */
-        /* height: 350px; */
-        /* height: auto; */
-        /* max-width: none; */
-        /* max-height: calc(100vh - 330px); */
-        max-height: calc(100vh - 225px);
-        left: auto;
-        right: 0;
+        max-height: 50vh;
         max-width: none;
-        top: auto;
-        bottom: -1px;
-    }
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
         height: auto;
-        right: -207px;
-        bottom: -47px;
-        max-height: calc(100vh - 225px);
-    }
-
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture picture  {
-        justify-content: flex-end;
-    }
-
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture picture,
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture img {
-        max-height: calc(100vh - 330px);
+        width: 68vw;
     }
 
     main[data-main="promotion"] section[data-section="about"] .container {
@@ -6898,6 +8674,559 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     main[data-main="call-center"] section[data-section="contacts"] form {
         width: calc(100% - 40px);
     }
+
+    main[data-main="calls"] section[data-section="intro"] {
+        padding-top: 100px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .container {
+        padding: 0 20px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__text {
+        width: 100%;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] h1 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 10px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__info {
+        font-size: 14px;
+        line-height: 20px;
+        width: 100%;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro___form {
+        display: none;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .leave-request {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        background: linear-gradient(93.26deg, #3F0FFB 0%, #4910F7 24.7%, #8914E2 46.36%, #D519C9 80.16%);
+        border-radius: 8px;
+        padding: 14px 22px;
+        width: fit-content;
+        width: -moz-fit-content;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .look-video span {
+        width: 164px;
+        line-height: 17px;
+        margin-top: 30px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture {
+        width: 100vw;
+        height: auto;
+        max-width: none;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture--back {
+        left: 78px;
+        width: 100%;
+        top: -56px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .container {
+        padding: 50px 20px 20px 20px;
+        background: rgba(235, 233, 247, 0.5) url(../images/calss_about_bg_mobile.jpeg) no-repeat right top;
+        background-size: contain;
+    }
+
+    main[data-main="calls"] section[data-section="about"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .leave-request {
+        margin-top: 20px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics {
+        margin-top: 40px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block {
+        width: calc(50% - 2.5px);
+        margin: 0 5px 30px 0;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block:nth-child(even) {
+        margin-right: 0;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block .value {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block .title {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 200px;
+    }
+
+    section[data-section="audio"] {
+        padding: 10px 0;
+    }
+
+    section[data-section="audio"] .container {
+        padding: 50px 20px;
+        background: rgba(233, 239, 247, 0.55) url(../images/calss_audio_bg_mobile.jpeg) no-repeat right top;
+        background-size: contain;
+    }
+
+    section[data-section="audio"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    section[data-section="audio"] .audio__wrap {
+        margin-bottom: 10px;
+    }
+
+    section[data-section="audio"] .audiofiles__item {
+        margin-bottom: 10px;
+        padding: 10px 15px 7px 10px;
+    }
+
+    .jp-title {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 15px;
+    }
+
+    .jp-download {
+        display: none;
+    }
+
+    .jp-time-holder {
+        font-size: 12px;
+        line-height: 15px;
+        left: 27px;
+    }
+
+    .jp-time-holder .separator,
+    .jp-time-holder .jp-duration {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .jp-mute, .jp-unmute {
+        width: 17px;
+        height: 17px;
+        right: 0;
+        top: 4px;
+    }
+
+    .jp-progress {
+        left: 123px;
+        width: calc(100% - 154px);
+    }
+
+    section[data-section="audio"] .audio__quote {
+        padding: 30px 0;
+    }
+
+    section[data-section="audio"] .audio__quote p {
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0 auto 15px auto;
+        width: 100%;
+    }
+
+    section[data-section="audio"] .audio__quote p:before {
+        top: -41px;
+        font-size: 128px;
+        line-height: 155px;
+    }
+
+    section[data-section="area"] {
+        padding: 0 0 10px 0;
+    }
+
+    section[data-section="area"] .container {
+        background: #F9F8FA url(../images/calls_area_bg_mobile.jpeg) no-repeat right bottom;
+        background-size: contain;
+        padding: 50px 20px;
+    }
+
+    section[data-section="area"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    section[data-section="area"] .area__bg {
+        display: none;
+    }
+
+    section[data-section="area"] .area__text {
+        left: 0;
+        top: 0;
+        position: relative;
+    }
+
+    section[data-section="area"] .area__text > p {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    section[data-section="area"] li {
+        position: relative;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: #111827;
+        padding-left: 21px;
+        margin-bottom: 5px;
+    }
+
+    section[data-section="area"] li:last-child {
+        margin-bottom: 0;
+    }
+
+    section[data-section="area"] li:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 8px;
+        background: #111827;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] {
+        padding: 0 0 10px 0;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .container {
+        background: rgba(235, 233, 247, 0.5) url(../images/calls_adv_bg_mobile.jpeg) no-repeat right center;
+        background-size: contain;
+        padding: 50px 20px 88px 20px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__wrap {
+        margin-bottom: 0;
+        width: calc(100% + 20px);
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block,
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block:nth-child(3n + 2),
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block:nth-child(even) {
+        padding: 25px 20px 65px 20px;
+        width: 230px;
+        margin: 0 15px 0 0;
+        height: 246px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block--icon {
+        top: auto;
+        bottom: 20px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block .title,
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block p {
+        width: 100%;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block p {
+        line-height: 17px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .slick-dots {
+        bottom: -38px;
+        width: calc(100% - 20px);
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .slick-dots li {
+        width: auto;
+        height: auto;
+        margin: 0 5px 0 0;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .slick-dots li:last-child {
+        margin-right: 0;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .slick-dots li button {
+        background: rgba(150, 163, 174, 0.3);
+        border-radius: 5px;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        line-height: 0;
+        font-size: 0;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .slick-dots li.slick-active button {
+        background: #E11EB5;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .slick-dots li button:before {
+        display: none;
+    }
+
+    main[data-main="calls"] section[data-section="form"] {
+        margin: 0 0 10px 0;
+    }
+
+    main[data-main="calls"] section[data-section="form"] .container {
+        padding: 84px 20px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] .form__wrap {
+        width: 100%;
+    }
+
+    main[data-main="calls"] section[data-section="form"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] .form__text {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 auto 20px auto;
+    }
+
+    main[data-main="calls"] section[data-section="form"] form {
+        width: calc(100% - 40px);
+    }
+
+    main[data-main="calls"] section[data-section="form"] .form__agreement {
+        width: 100%;
+    }
+
+    section[data-section="direction"] {
+        padding: 0 0 10px 0;
+    }
+
+    section[data-section="direction"] .container {
+        background: rgba(235, 233, 247, 0.5) url(../images/calls_direction_bg_mobile.jpeg) no-repeat top left;
+        background-size: contain;
+        padding: 50px 20px 88px 20px;
+    }
+
+    section[data-section="direction"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+        width: 100%;
+    }
+
+    section[data-section="direction"] .directions__wrap {
+        margin-bottom: 0;
+        width: calc(100% + 20px);
+    }
+
+    section[data-section="direction"] .direction__block,
+    section[data-section="direction"] .direction__block:nth-child(3n),
+    section[data-section="direction"] .direction__block:nth-child(even) {
+        width: 280px;
+        margin: 0 15px 0 0;
+        padding: 10px 20px 20px 20px;
+        min-height: 257px;
+    }
+
+    section[data-section="direction"] .direction__block p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    section[data-section="direction"] .slick-dots {
+        bottom: -38px;
+        width: calc(100% - 20px);
+    }
+
+    section[data-section="direction"] .slick-dots li {
+        width: auto;
+        height: auto;
+        margin: 0 5px 0 0;
+    }
+
+    section[data-section="direction"] .slick-dots li:last-child {
+        margin-right: 0;
+    }
+
+    section[data-section="direction"] .slick-dots li button {
+        background: rgba(150, 163, 174, 0.3);
+        border-radius: 5px;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        line-height: 0;
+        font-size: 0;
+    }
+
+    section[data-section="direction"] .slick-dots li.slick-active button {
+        background: #E11EB5;
+    }
+
+    section[data-section="direction"] .slick-dots li button:before {
+        display: none;
+    }
+
+    section[data-section="economy"] {
+        padding: 0 0 10px 0;
+    }
+
+    section[data-section="economy"] .container {
+        background: rgba(233, 239, 247, 0.8) url(../images/cals_form_bg_mobile.jpeg) no-repeat center center;
+        background-size: contain;
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    section[data-section="economy"] p {
+        font-size: 24px;
+        line-height: 29px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section[data-section="capabilities"] {
+        padding: 0 0 10px 0;
+    }
+
+    section[data-section="capabilities"] .container {
+        background: rgba(233, 239, 247, 0.55) url(../images/calls_capabality_bg_mobile.jpeg) no-repeat right top;
+        background-size: contain;
+        padding: 50px 20px;
+    }
+
+    section[data-section="capabilities"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    section[data-section="capabilities"] .capabilities__text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section[data-section="capabilities"] .capability__block {
+        width: 100%;
+        margin: 0 0 10px 0;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    section[data-section="capabilities"] .capability__block:nth-child(n + 3) {
+        min-height: auto;
+    }
+
+    section[data-section="capabilities"] .capability__block:last-child {
+        margin-bottom: 0;
+    }
+
+    section[data-section="capabilities"] .capabilities__operator {
+        padding: 20px 20px 30px 20px;
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: flex-start;
+    }
+
+    section[data-section="capabilities"] .operator__wrap {
+        margin-right: 0;
+    }
+
+    section[data-section="capabilities"] .operator__gif {
+        height: 71px;
+        width: 199px;
+        margin-top: 10px;
+        margin-left: 56px;
+    }
+
+    section[data-section="steps"] .container {
+        padding: 41px 20px 55px 20px;
+    }
+
+    section[data-section="steps"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    section[data-section="steps"] .step__block {
+        width: 280px;
+        padding: 20px;
+        height: 440px;
+        margin-right: 15px;
+        background: rgba(233, 239, 247, 0.55) url('../images/step1_bg_block_mob.jpeg') no-repeat top left;
+        background-size: contain;
+    }
+
+    section[data-section="steps"] .step__block:nth-child(2) {
+        background: rgba(235, 233, 247, 0.5) url('../images/step2_bg_block_mob.jpeg') no-repeat top left;
+        background-size: contain;
+    }
+
+    section[data-section="steps"] .step__block--title {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+
+    section[data-section="steps"] li {
+        padding-bottom: 16px;
+    }
+
+    section[data-section="steps"] .slick-dots {
+        bottom: -7px;
+    }
+
+    section[data-section="steps"] .step__block:not(:last-child) ul:before {
+        height: calc(100% - 20px);
+    }
+
+    main[data-main="calls"] section[data-section="news"] {
+        padding: 10px 0 0 0;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .container {
+        background: #E9EFF7 url(../images/calls_contacts_bg_mobile.jpeg) no-repeat left bottom;
+        background-size: contain;
+        padding: 60px 20px;
+        border-radius: 0;
+    }
+
+    main[data-main="calls"] section[data-section="contacts"] .contacts__text {
+        font-size: 14px;
+        line-height: 20px;
+        width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    section[data-section="contacts"] form {
+        width: calc(100% - 40px);
+    }
 }
 
 @media only screen and (min-width: 383px) and (max-width: 767px) {
@@ -6914,8 +9243,8 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
 
 @media only screen and (max-height: 600px) and (min-width: 1200px) {
     main[data-main="main_page"] section[data-section="intro"] .intro__picture {
-        width: 458px;
-        height: 450px;
+        right: -132px;
+        height: 870px;
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture .bg--back {
@@ -7081,13 +9410,8 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        /*width: 480px;*/
-        /*height: 528px;*/
-    }
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        height: 750px;
-        right: -240px;
-        top: -60px;
+        right: -180px;
+        height: 1000px;
     }
 
     main[data-main="promotion"] section[data-section="advantages"] h2 {
@@ -7181,6 +9505,142 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     main[data-main="call-center"] section[data-section="interface"] .interface__block {
         width: 450px;
     }
+
+    main[data-main="calls"] section[data-section="intro"] .intro__picture {
+        height: auto;
+        width: 320px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics {
+        width: 600px;
+        height: 435px;
+
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics--inner {
+        padding: 35px 45px 30px 45px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__wrap {
+        width: calc(100% - 665px);
+    }
+
+    section[data-section="audio"] h2 {
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    section[data-section="audio"] .audiofiles__item {
+        padding: 15px 15px 8px 20px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block .title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] h2 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block {
+        padding: 15px 20px;
+        min-height: auto;
+    }
+
+    main[data-main="calls"] section[data-section="advantages"] .advantages__block p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    section[data-section="capabilities"] h2 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    section[data-section="capabilities"] .capabilities__text {
+        margin-bottom: 20px;
+    }
+
+    section[data-section="capabilities"] .capability__block {
+        padding: 15px 20px;
+        min-height: auto;
+    }
+
+    section[data-section="capabilities"] .capability__block:nth-child(n + 3) {
+        min-height: auto;
+    }
+
+    section[data-section="capabilities"] .capability__block p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    section[data-section="capabilities"] .capability__block .title {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    section[data-section="steps"] h2 {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+
+    section[data-section="steps"] .step__block--title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    section[data-section="steps"] li {
+        padding-bottom: 15px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    section[data-section="steps"] .leave-request {
+        margin: 25px 0 0 0;
+    }
+}
+
+@media only screen and (max-height: 749px) and (min-width: 1200px) {
+    section[data-section="direction"] .direction__block .title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    section[data-section="direction"] .direction__block p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    section[data-section="direction"] h2 {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+
+    section[data-section="direction"] .direction__block {
+        padding: 10px 15px 15px 15px;
+        min-height: auto;
+    }
+
+    section[data-section="direction"] .direction__block--inner .counter__current {
+        left: -11px;
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    section[data-section="direction"] .direction__block--inner .counter__total {
+        top: 15px;
+    }
+
+    section[data-section="direction"] .direction__block--inner {
+        padding: 45px 0 0 0;
+    }
 }
 
 @media only screen and (max-height: 750px) and (min-width: 1600px) {
@@ -7202,8 +9662,8 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
     }
 
     main[data-main="main_page"] section[data-section="intro"] .intro__picture {
-        width: 490px;
-        height: 482px;
+        right: -70px;
+        height: 925px;
     }
 
     main[data-main="main_page"] section[data-section="ivr"] .products__picture--back {
@@ -7221,6 +9681,18 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
 
     main[data-main="call-center"] section[data-section="interface"] .container {
         top: -35px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .container {
+        height: 435px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics {
+        height: 435px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about_statistics--inner {
+        padding: 35px 45px 30px 45px;
     }
 }
 
@@ -7307,29 +9779,38 @@ main[data-main="call-center"] section[data-section="contacts"] .container {
         right: -5px;
     }
 
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        max-height: calc(100vh - 260px);
-    }
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        right: -185px;
-        max-height: calc(100vh - 260px);
-    }
-
     main[data-main="call-center"] section[data-section="advantages-for-business"] .cloud {
         left: 35px;
         top: 135px;
     }
-}
 
-@media only screen and (min-height: 700px) and (max-width: 767px) {
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        height: calc(100vh - 225px);
-        max-height: 550px;
+    main[data-main="calls"] section[data-section="intro"] h1 {
+        font-size: 32px;
+        line-height: 40px;
     }
-}
 
-@media only screen and (max-height: 600px) and (max-width: 320px) {
-    main[data-main="promotion"] section[data-section="intro"] .intro__picture video {
-        right: -150px;
+    main[data-main="calls"] section[data-section="intro"] .intro__info {
+        margin-bottom: 20px;
+    }
+
+    main[data-main="calls"] section[data-section="intro"] .look-video span {
+        margin-top: 20px;
+    }
+
+    main[data-main="calls"] section[data-section="about"] .about__statistics--block .title {
+        font-size: 13px;
+    }
+
+    main[data-main="calls"] section[data-section="form"] form {
+        width: 100%;
+    }
+
+    section[data-section="capabilities"] .capabilities__operator {
+        padding: 20px 15px 30px 15px;
+    }
+
+    section[data-section="capabilities"] .operator__icon {
+        width: 40px;
+        height: 40px;
     }
 }

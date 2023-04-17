@@ -17,7 +17,7 @@ function cursorMoveFunc() {
         es.classList.remove('over-button');
     });
 }
-cursorMoveFunc();
+//cursorMoveFunc();
 
 
 // Настройка эффекта "магнита" при наведении курсором
@@ -40,7 +40,6 @@ $(document).ready(function() {
     }
     calcVH();
 
-    
     // Маски
     var listCountries = $.masksSort($.masksLoad("https://cdn.rawgit.com/andr-04/inputmask-multi/master/data/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
     var maskOpts = {
@@ -98,12 +97,6 @@ $(document).ready(function() {
         );
     }
     wow.init();
-    // // Отменяем анимацию копирайта на маленьких экранах
-    // if ($(window).width() < 1200) {
-    //     setTimeout(()=>{
-    //         $('footer').removeClass('wow fadeInUp');
-    //     }, 300);
-    // }
 
 
     // Подсчет количества экранов
@@ -155,7 +148,18 @@ $(document).ready(function() {
     });
 
 
-    // Слайдер преимуществ на моб версии
+    // Слайдеры
+    if($(window).width() < 1200) {
+        $('section[data-section="steps"] .steps__wrap').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            dots: true,
+            arrows: false,
+            infinite: false,
+            swipeToSlide: true
+        });
+    }
     if($(window).width() < 768) {
         $('section .advantages__wrap').each(function() {
             $(this).find('h2').prependTo($(this).parent());
@@ -192,6 +196,15 @@ $(document).ready(function() {
                 swipeToSlide: true
             });
         });
+        $('section[data-section="direction"] .directions__wrap').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            dots: true,
+            arrows: false,
+            infinite: false,
+            swipeToSlide: true
+        });
     }
 
 
@@ -213,12 +226,12 @@ $(document).ready(function() {
                     block: 'start'
                 });
             });
-        };
+        }
     } else {
         $("body").on('click', '[href*="#"]', function(e){
             e.preventDefault();
             var fixed_offset = $('header').outerHeight(true);
-            $('html, body').animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+            $('html, body').animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 250);
         });
     }
 
@@ -380,9 +393,17 @@ $(document).ready(function() {
     $('.j-leave-request').click(function(){
         $('.wrapper--shadow').addClass('active');
         if ($(window).width() < 768) {
+            var pageScrollTop = $(window).scrollTop();
             $('body').css('position','fixed');
+            $('body').attr('data-scroll', pageScrollTop);
         }
         $('.popup[data-popup="presentation"]').addClass('active');
+        if($(this).attr('data-title').length !== 0) {
+            var title = $(this).attr('data-title');
+            var subtitle = $(this).attr('data-subtitle');
+            $('.popup[data-popup="presentation"] .popup__title').html(title);
+            $('.popup[data-popup="presentation"] .popup__info').html(subtitle);
+        }
     });
 
 
@@ -399,53 +420,140 @@ $(document).ready(function() {
         $('.wrapper--shadow').removeClass('active');
         if ($(window).width() < 768) {
             $('body').css('position','');
+            var pageScrollTop = $('body').attr('data-scroll');
+            $('html').css('scroll-behavior','unset');
+            $(window).scrollTop(pageScrollTop)
+            $('html').css('scroll-behavior','');
         }
     }
 
 
-    // Виртуальный колл-центр с готовыми сценариями. Расчет размера фото на первом экране
-    // function calcImgSize() {
-    //     if($(window).width() < 768) {
-    //         var contentPart1 = +(($('main section:first-of-type').css('padding-top')).replace('px',''));
-    //         var contentPart2 = $('main section:first-of-type .intro__text').outerHeight(true);
-    //         var imgHeight = contentPart1 + contentPart2 + 10;
-    //         $('main section:first-of-type .intro__picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
-    //         if($('main').attr('data-main') == 'call-center') {
-    //             var contentPart3 = +(($('main section:first-of-type .intro__picture').css('bottom')).replace('px',''));
-    //             imgHeight += contentPart3;
-    //             $('main section:first-of-type .intro__picture picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
-    //             $('main section:first-of-type .intro__picture img').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
-    //         }
-    //         if($('main').attr('data-main') == 'promotion') {
-    //             $('main section:first-of-type .intro__picture video').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
-    //         }
-    //     }
-    // }
-    // if($('main').attr('data-main') == 'call-center' || $('main').attr('data-main') == 'promotion') {
-    //     calcImgSize();
-    // }
-    // $(window).resize(function(){
-    //     if($('main').attr('data-main') == 'call-center' || $('main').attr('data-main') == 'promotion') {
-    //         calcImgSize();
-    //     }
-    // });
+    // Расчет размера фото на первом экране
     function calcImgSize() {
         if($(window).width() < 768) {
             var contentPart1 = +(($('main section:first-of-type').css('padding-top')).replace('px',''));
             var contentPart2 = $('main section:first-of-type .intro__text').outerHeight(true);
             var contentPart3 = +(($('main section:first-of-type .intro__picture').css('bottom')).replace('px',''));
             var imgHeight = contentPart1 + contentPart2 + contentPart3 + 10;
-            $('main section:first-of-type .intro__picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
-            $('main section:first-of-type .intro__picture picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
-            $('main section:first-of-type .intro__picture img').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+            if($('main').attr('data-main') == 'promotion') {
+                imgHeight -= 33;
+            } else if($('main').attr('data-main') == 'calls') {
+                imgHeight -= 131;
+            }
+            if($('main').attr('data-main') == 'calls') {
+                $('main section:first-of-type .intro__picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+                $('main section:first-of-type .intro__picture--front picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+                $('main section:first-of-type .intro__picture--front img').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+            } else {
+                $('main section:first-of-type .intro__picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+                $('main section:first-of-type .intro__picture picture').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+                $('main section:first-of-type .intro__picture img').css('max-height', 'calc(100vh - ' + imgHeight + 'px)');
+            }
         }
     }
-    if($('main').attr('data-main') == 'call-center') {
+    if($('main').attr('data-main') == 'call-center' || $('main').attr('data-main') == 'promotion' || $('main').attr('data-main') == 'calls') {
         calcImgSize();
     }
     $(window).resize(function(){
-        if($('main').attr('data-main') == 'call-center') {
+        if($('main').attr('data-main') == 'call-center' || $('main').attr('data-main') == 'promotion' || $('main').attr('data-main') == 'calls') {
             calcImgSize();
         }
     });
+
+
+    // Определение положения блока в счетчике
+    $('section[data-section="direction"] .counter__total').each(function(){
+        setTimeout(()=>{
+            var leftShift = $(this).prev('.counter__current').outerWidth(true) - 4;
+            $(this).css('left', leftShift + 'px');
+        }, 100);
+    });
+
+
+    // AUDIO
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+            $(this).jPlayer("setMedia", {
+                mp3: "/upload/frontend/audio/speech-synthesis.wav",
+            });
+        },
+        play: function () { // To avoid both jPlayers playing together.
+            $(this).jPlayer("pauseOthers");
+        },
+        repeat: function (event) { // Override the default jPlayer repeat event handler
+            if (event.jPlayer.options.loop) {
+                $(this).unbind(".jPlayerRepeat").unbind(".jPlayerNext");
+                $(this).bind($.jPlayer.event.ended + ".jPlayer.jPlayerRepeat", function () {
+                    $(this).jPlayer("play");
+                });
+            } else {
+                $(this).unbind(".jPlayerRepeat").unbind(".jPlayerNext");
+                $(this).bind($.jPlayer.event.ended + ".jPlayer.jPlayerNext", function () {
+                    $("#jquery_jplayer_2").jPlayer("play", 0);
+                });
+            }
+        },
+        swfPath: "../js",
+        supplied: "mp3, oga",
+        cssSelectorAncestor: "#jp_container_1",
+        wmode: "window"
+    });
+
+    $("#jquery_jplayer_2").jPlayer({
+        ready: function () {
+            $(this).jPlayer("setMedia", {
+                mp3: "/upload/frontend/audio/4ad16146503c3a1255fddab31c0f7ca2.mp3",
+            });
+        },
+        play: function () { // To avoid both jPlayers playing together.
+            $(this).jPlayer("pauseOthers");
+        },
+        repeat: function (event) { // Override the default jPlayer repeat event handler
+            if (event.jPlayer.options.loop) {
+                $(this).unbind(".jPlayerRepeat").unbind(".jPlayerNext");
+                $(this).bind($.jPlayer.event.ended + ".jPlayer.jPlayerRepeat", function () {
+                    $(this).jPlayer("play");
+                });
+            } else {
+                $(this).unbind(".jPlayerRepeat").unbind(".jPlayerNext");
+                $(this).bind($.jPlayer.event.ended + ".jPlayer.jPlayerNext", function () {
+                    $("#jquery_jplayer_2").jPlayer("play", 0);
+                });
+            }
+        },
+        swfPath: "../js",
+        supplied: "mp3, oga",
+        cssSelectorAncestor: "#jp_container_2",
+        wmode: "window"
+    });
+
+    $("#jquery_jplayer_3").jPlayer({
+        ready: function () {
+            $(this).jPlayer("setMedia", {
+                mp3: "/upload/frontend/audio/Collection.wav",
+            });
+        },
+        play: function () { // To avoid both jPlayers playing together.
+            $(this).jPlayer("pauseOthers");
+        },
+        repeat: function (event) { // Override the default jPlayer repeat event handler
+            if (event.jPlayer.options.loop) {
+                $(this).unbind(".jPlayerRepeat").unbind(".jPlayerNext");
+                $(this).bind($.jPlayer.event.ended + ".jPlayer.jPlayerRepeat", function () {
+                    $(this).jPlayer("play");
+                });
+            } else {
+                $(this).unbind(".jPlayerRepeat").unbind(".jPlayerNext");
+                $(this).bind($.jPlayer.event.ended + ".jPlayer.jPlayerNext", function () {
+                    $("#jquery_jplayer_3").jPlayer("play", 0);
+                });
+            }
+        },
+        swfPath: "../js",
+        supplied: "mp3, oga",
+        cssSelectorAncestor: "#jp_container_3",
+        wmode: "window"
+    });
+
+
 });
