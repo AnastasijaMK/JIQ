@@ -1,33 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список сверстанных страниц проекта</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Голосовой ассистент JIQ</title>
+
+    <link rel="stylesheet" href="css/style-lib.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<style>
-    body {
-        margin:  0 auto;
-        max-width: 1200px;
-        padding: 0 20px;
-    }
-    li {
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-    a {
-        text-decoration: none;
-        color:  #000000;
-    }
-</style>
-<h1>Список сверстанных страниц</h1>
-<ol>
-    <li><a href="main_page.html">Главная страница</a></li>
-    <li><a href="ivr.html">Виртуальный ассистент для замены IVR</a></li>
-    <li><a href="grocery_retail.html">Голосовой ассистент для продуктового ритейла</a></li>
-    <li><a href="promotion.html">Мобильный ассистент для продвижения товаров и услуг</a></li>
-    <li><a href="call_center.html">Виртуальный колл-центр с готовыми сценариями</a></li>
-</ol>
+<div class="wrapper">
+    <header class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="#" title="Голосовой ассистент JIQ">
+                        <img src="images/logo-animation.gif" alt="Голосовой ассистент JIQ">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="javascript:void(0);"><span>Продукты</span></a></li>
+                        <li><a href="javascript:void(0);"><span>Новости</span></a></li>
+                        <li><a href="javascript:void(0);"><span>Партнерам</span></a></li>
+                        <li><a href="javascript:void(0);"><span>Контакты</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+                <div class="header__phone">
+                    <a href="tel:+74992881890" title="+442081579909">+44 20 8157 9909</a>
+                </div>
+                <div class="header__language">
+                    <a href="#" class="active"><span>RU</span></a>
+                    <a href="#"><span>EN</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main data-main="main_page">
+        <div class="mouse-follow"></div>
+        <section data-section="intro">
+            <div class="container">
+                <div class="intro__text wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h1>Голосовые ассистенты</h1>
+                    <p class="intro__info">Для увеличения эффективности<br> вашего бизнеса</p>
+                    <div class="intro__buttons">
+                        <a href="#form" class="leave-request j-leave-request blur-effect shadow-effect">
+                            Оставить заявку
+                            <span class="btn-hover"></span>
+                        </a>
+                        <div class="look-video">
+                            <a class="fancybox_link" data-fancybox="media" href="http://www.youtube.com/watch?v=slT1_AAoHzc">
+                                <span>Смотреть видео</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro__picture">
+                    <picture class="wow fadeInUp bg--back" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <img src="images/main_page_bg_back.gif" alt="Голосовые ассистенты">
+                    </picture>
+                    <picture class="wow fadeInUp bg--front" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <source srcset="images/main_page_bg_front_mobile.png" media="(max-width: 767px)">
+                        <source srcset="images/main_page_bg_front_tablet.png" media="(max-width: 1199px)">
+                        <source srcset="images/main_page_bg_front.png" media="(min-width: 1199px)">
+                        <img src="images/main_page_bg_front.png" alt="Голосовые ассистенты">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="products" data-section="calls">
+            <div class="container">
+                <div class="products__aside wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h2>Голосовой робот <br> для исходящих звонков</h2>
+                    <p>Создание и интеграция в IT-ландшафт виртуальных голосовых ассистентов по требованиям заказчика</p>
+                    <a href="javascript:void(0);" class="product__link blur-effect shadow-effect">
+                        <span>Подробнее о продукте</span>
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="products__picture">
+                    <div class="products__picture--back wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <img src="images/main_page_calls_bg_back.gif" alt="Голосовой робот для исходящих звонков">
+                        </picture>
+                    </div>
+                    <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <source srcset="images/main_page_calls_bg_front_mobile.png" media="(max-width: 767px)">
+                            <source srcset="images/main_page_calls_bg_front_tablet.png" media="(max-width: 1199px)">
+                            <source srcset="images/main_page_calls_bg_front.png" media="(min-width: 1199px)">
+                            <img src="images/main_page_calls_bg_front.png" alt="Голосовой робот для исходящих звонков">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products" data-section="ivr">
+            <div class="container">
+                <div class="products__aside wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h2>Виртуальный ассистент <br> для замены IVR</h2>
+                    <p>Интеллектуальный голосовой робот для обработки входящих звонков, позволяющий заменить IVR и снизить нагрузку на операторов</p>
+                    <a href="/frontend/jiq/ivr.php" class="product__link blur-effect shadow-effect">
+                        <span>Подробнее о продукте</span>
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="products__picture">
+                    <div class="products__picture--back wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <img src="images/main_page_ivr_bg_back.gif" alt="Виртуальный ассистент для замены IVR">
+                        </picture>
+                    </div>
+                    <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <source srcset="images/main_page_ivr_bg_front_mobile.png" media="(max-width: 767px)">
+                            <source srcset="images/main_page_ivr_bg_front_tablet.png" media="(max-width: 1199px)">
+                            <source srcset="images/main_page_ivr_bg_front.png" media="(min-width: 1199px)">
+                            <img src="images/main_page_ivr_bg_front.png" alt="Виртуальный ассистент для замены IVR">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products" data-section="promotion">
+            <div class="container">
+                <div class="products__aside wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h2>Мобильный ассистент <br> для продвижения товаров и услуг</h2>
+                    <p>Решение для запуска нового типа рекламных кампаний, позволяющих интерактивно взаимодействовать с виртуальным ассистентом в мобильном телефоне</p>
+                    <a href="/frontend/jiq/promotion.php" class="product__link blur-effect shadow-effect">
+                        <span>Подробнее о продукте</span>
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="products__picture">
+                    <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <source srcset="images/main_page_promotion_bg_front_mobile.png" media="(max-width: 767px)">
+                            <source srcset="images/main_page_promotion_bg_front_tablet.png" media="(max-width: 1199px)">
+                            <source srcset="images/main_page_promotion_bg_front.png" media="(min-width: 1199px)">
+                            <img src="images/main_page_promotion_bg_front.png" alt="Мобильный ассистент для продвижения товаров и услуг">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products" data-section="call-center">
+            <div class="container">
+                <div class="products__aside wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h2>Виртуальный колл-центр с готовыми сценариями</h2>
+                    <p>Самостоятельный быстрый запуск и управление роботизированным обзвоном с помощью преднастроенных шаблонов диалогов</p>
+                    <a href="/frontend/jiq/call_center.php" class="product__link blur-effect shadow-effect">
+                        <span>Подробнее о продукте</span>
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="products__picture">
+                    <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <source srcset="images/main_page_call-center_bg_front_mobile.png" media="(max-width: 767px)">
+                            <source srcset="images/main_page_call-center_bg_front_tablet.png" media="(max-width: 1199px)">
+                            <source srcset="images/main_page_call-center_bg_front.png" media="(min-width: 1199px)">
+                            <img src="images/main_page_call-center_bg_front.png" alt="Мобильный ассистент для продвижения товаров и услуг">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products" data-section="grocery">
+            <div class="container">
+                <div class="products__aside wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h2>Голосовой ассистент <br> для продуктового ритейла</h2>
+                    <p>Решение для управления покупками в режиме диалога в мобильных приложениях продуктового ритейла</p>
+                    <a href="/frontend/jiq/grocery_retail.php" class="product__link blur-effect shadow-effect">
+                        <span>Подробнее о продукте</span>
+                        <span class="btn-hover"></span>
+                    </a>
+                </div>
+                <div class="products__picture">
+                    <div class="products__picture--back wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <img src="images/main_page_grocery_bg_back.gif" alt="Голосовой ассистент для продуктового ритейла">
+                        </picture>
+                    </div>
+                    <div class="products__picture--front wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
+                        <picture>
+                            <source srcset="images/main_page_grocery_bg_front_mobile.png" media="(max-width: 767px)">
+                            <source srcset="images/main_page_grocery_bg_front_tablet.png" media="(max-width: 1199px)">
+                            <source srcset="images/main_page_grocery_bg_front.png" media="(min-width: 1199px)">
+                            <img src="images/main_page_grocery_bg_front.png" alt="Голосовой ассистент для продуктового ритейла">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-section="contacts">
+            <div class="container">
+                <div class="contacts__wrap">
+                    <h2 class="wow fadeInUp no-md" data-wow-duration="0.7s" data-wow-delay="0.4s">Оставить <span class="highlighted">заявку на презентацию</span> виртуального оператора JIQ!</h2>
+                    <h2 class="wow fadeInUp md" data-wow-duration="0.7s" data-wow-delay="0.4s">Оставить заявку на презентацию <span class="highlighted">оператора JIQ!</span></h2>
+                    <p class="contacts__text wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы</p>
+                    <form action="" class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                        <div class="form__row">
+                            <label data-label="name">
+                                <input type="text" name="NAME" placeholder="Имя.." required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <label data-label="phone">
+                                <input type="tel" name="PHONE" placeholder="+7 (999) 999 99 99" required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                            <label data-label="email">
+                                <input type="email" name="EMAIL" placeholder="info@info.ru" required>
+                                <span class="input--error">Заполните это поле</span>
+                            </label>
+                        </div>
+                        <div class="form__button">
+                            <button type="submit" class="blur-effect shadow-effect">
+                                <span>Оставить заявку</span>
+                                <span class="btn-hover"></span>
+                            </button>
+                            <p class="form__agreement">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="page__scroller--wrap wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">
+            <div class="page__scroller magnetize"></div>
+        </div>
+
+        <div class="wrapper--shadow"></div>
+        <div class="popup" data-popup="presentation">
+            <div class="popup__close"></div>
+            <p class="popup__title no-xs">Оставить <span class="highlighted">заявку на презентацию</span> виртуального оператора JIQ!</p>
+            <p class="popup__title xs">Оставить заявку<br> на презентацию<br> <span class="highlighted">оператора JIQ!</span></p>
+            <p class="popup__info">Заполни форму, после этого наш <b>менеджер свяжется</b> с вами и ответит на интересующие вопросы</p>
+            <form action="">
+                <div class="form__row">
+                    <label data-label="name">
+                        <input type="text" name="NAME" placeholder="Имя.." required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                    <label data-label="phone">
+                        <input type="tel" name="PHONE" placeholder="+7 (999) 999 99 99" required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                    <label data-label="email">
+                        <input type="email" name="EMAIL" placeholder="info@info.ru" required>
+                        <span class="input--error">Заполните это поле</span>
+                    </label>
+                </div>
+                <div class="form__button">
+                    <button type="submit" class="blur-effect shadow-effect">
+                        <span>Отправить заявку</span>
+                        <span class="btn-hover"></span>
+                    </button>
+                    <p class="form__agreement">Нажимая на кнопку, Вы даете согласие на <a href="#">обработку своих персональных данных</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer  class="wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.5s">
+        <div class="container">
+            <div class="footer__section">
+                <span class="section--current"></span>
+            </div>
+            <div class="footer__copyright">
+                <p>© 2022 JIQ AI</p>
+            </div>
+            <div class="footer__languages">
+                <p>This site has<br> multiple <span class="highlighted">languages</span></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/script-lib.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
