@@ -2966,8 +2966,11 @@ main[data-main="promotion"] section[data-section="intro"] .intro__statistics .up
 
 main[data-main="promotion"] section[data-section="intro"] .intro__picture {
     background: transparent;
-    height: 1162px;
-    right: -110px;
+    /* height: 1162px; */
+    height: 962px;
+    max-height: calc(100vh + 200px);
+    /* right: -110px; */
+    right: -310px;
     bottom: -142px;
     top: auto;
     width: auto;
@@ -4413,7 +4416,7 @@ section[data-section="economy"] .leave-request .btn-hover {
 }
 
 section[data-section="capabilities"] {
-    background: rgba(233, 239, 247, 0.55) url(../images/calls_capabality_bg.jpeg) no-repeat right center;
+    background: rgba(233, 239, 247, 0.55);
     background-size: contain;
 }
 
@@ -4893,7 +4896,8 @@ main[data-main="main_page"] section.products[data-section="promotion"] .products
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        height: 1235px;
+        /* height: 1235px; */
+        height: 1000px;
     }
 
     main[data-main="call-center"] section[data-section="intro"] .container,
@@ -5086,7 +5090,8 @@ main[data-main="main_page"] section.products[data-section="promotion"] .products
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        right: -175px;
+        /* right: -175px; */
+        right: -275px;
     }
 
     main[data-main="call-center"] section[data-section="intro"] .container,
@@ -5202,8 +5207,10 @@ main[data-main="main_page"] section.products[data-section="promotion"] .products
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        right: -215px;
-        height: 1070px;
+        /* right: -215px;
+        height: 1070px; */
+        right: -355px;
+        height: 900px;
     }
 
     main[data-main="promotion"] section[data-section="advantages"] .cloud {
@@ -7490,13 +7497,6 @@ main[data-main="main_page"] section.products[data-section="promotion"] .products
         display: none;
     }
 
-    section[data-section="advantages-for-business"] {
-        background: rgba(235, 233, 247, 0.5) url(../images/advantages-for-business_bg_mobile.jpeg) no-repeat left center;
-        background-size: contain;
-        margin: 10px 0;
-        width: 100%;
-    }
-
     section[data-section="advantages-for-business"] h2 {
         padding-left: 0;
         margin-right: 0;
@@ -9511,7 +9511,8 @@ main[data-main="main_page"] section.products[data-section="promotion"] .products
     }
 
     main[data-main="promotion"] section[data-section="intro"] .intro__picture {
-        right: -180px;
+        /* right: -180px; */
+        right: -280px;
         height: 1000px;
     }
 

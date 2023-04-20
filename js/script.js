@@ -474,7 +474,7 @@ $(document).ready(function() {
     $("#jquery_jplayer_1").jPlayer({
         ready: function () {
             $(this).jPlayer("setMedia", {
-                mp3: "/upload/frontend/audio/speech-synthesis.wav",
+                mp3: "images/audio/speech-synthesis.wav",
             });
         },
         play: function () { // To avoid both jPlayers playing together.
@@ -502,7 +502,7 @@ $(document).ready(function() {
     $("#jquery_jplayer_2").jPlayer({
         ready: function () {
             $(this).jPlayer("setMedia", {
-                mp3: "/upload/frontend/audio/4ad16146503c3a1255fddab31c0f7ca2.mp3",
+                mp3: "images/audio/4ad16146503c3a1255fddab31c0f7ca2.mp3",
             });
         },
         play: function () { // To avoid both jPlayers playing together.
@@ -530,7 +530,7 @@ $(document).ready(function() {
     $("#jquery_jplayer_3").jPlayer({
         ready: function () {
             $(this).jPlayer("setMedia", {
-                mp3: "/upload/frontend/audio/Collection.wav",
+                mp3: "images/audio/Collection.wav",
             });
         },
         play: function () { // To avoid both jPlayers playing together.
@@ -556,4 +556,12 @@ $(document).ready(function() {
     });
 
 
+});
+
+
+// Обновление страницы при переходе с десктопной на планшетную и на моб версии
+window.addEventListener('resize',()=>{
+    if(document.documentElement.clientWidth == 767 || document.documentElement.clientWidth == 1199) {
+        location.reload();
+    }
 });
